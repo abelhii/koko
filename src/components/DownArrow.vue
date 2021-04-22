@@ -45,7 +45,7 @@ export default defineComponent({
   &:active {
     .line,
     .circle {
-      transition: 0.2s ease-in-out;
+      transition: 0.1s ease-in-out;
       background-color: $accent;
     }
 

@@ -50,10 +50,15 @@ $scroll-anim: scroll 20s infinite linear;
 }
 
 @media (min-width: 1024px) {
+  $scroll-anim: scroll 30s infinite linear;
   .scroll-parent {
     .scrolling {
       padding-left: 10rem;
       font-size: 30rem;
+      -webkit-animation: $scroll-anim;
+      -moz-animation: $scroll-anim;
+      -o-animation: $scroll-anim;
+      animation: $scroll-anim;
     }
   }
 }

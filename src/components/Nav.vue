@@ -41,7 +41,7 @@ export default defineComponent({
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 2rem;
   margin: auto;
   max-width: $max-width;
 
@@ -64,14 +64,14 @@ export default defineComponent({
       position: fixed;
       top: 0;
       right: 0;
-      min-height: 100vh;
-      min-width: 100vw;
+      min-height: 100%;
+      min-width: 100%;
       z-index: 100;
       color: white;
       background-color: $black;
 
       &:nth-child(n) {
-        padding: 2rem 4rem;
+        padding: 2rem;
       }
     }
 
@@ -88,13 +88,14 @@ export default defineComponent({
       display: none;
       flex-direction: column;
       gap: 2rem;
-      margin: 6rem;
+      margin: 4rem 2rem;
       list-style: none;
 
       li span {
         position: relative;
         font-weight: 500;
         font-size: 2rem;
+        user-select: none;
 
         &::after {
           content: "";
@@ -126,6 +127,8 @@ export default defineComponent({
 
 @media (min-width: 1024px) {
   .nav {
+    padding: 2rem 4rem;
+
     .nav-options {
       display: flex;
       align-items: center;

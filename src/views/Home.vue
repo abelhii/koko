@@ -3,12 +3,24 @@
   <Scroll :scrollWord="scrollWord" />
   <div class="home">
     <header>
-      <p>
-        Koko is a designer focused on creating user-centric experiences and
-        meaningful identities.
-      </p>
-      <DownArrow />
+      <div class="home-content">
+        <p>
+          Koko is a designer focused on creating user-centric experiences and
+          meaningful identities.
+        </p>
+        <DownArrow />
+      </div>
     </header>
+    <section>
+      <div class="home-content">
+        <h1>SELECTED PROJECTS</h1>
+        <div class="projects">
+          <Project />
+          <Project />
+          <Project />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -17,6 +29,7 @@ import { defineComponent } from "vue";
 import Nav from "@/components/Nav.vue";
 import Scroll from "@/components/Scroll.vue";
 import DownArrow from "@/components/DownArrow.vue";
+import Project from "@/components/Project.vue";
 
 export default defineComponent({
   name: "Home",
@@ -24,6 +37,7 @@ export default defineComponent({
     Nav,
     Scroll,
     DownArrow,
+    Project,
   },
   data() {
     return {
@@ -38,30 +52,67 @@ export default defineComponent({
 @import "../styles/_defaultVars.scss";
 
 .home {
-  position: relative;
+  display: grid;
+  gap: 4rem;
   height: 100%;
   margin: auto;
-  max-width: $max-width;
 
-  header {
+  .home-content {
+    margin: auto;
+    max-width: $max-width;
+    padding: 0 4rem;
+  }
+
+  header > .home-content {
     display: grid;
     place-items: center;
-    gap: 8rem;
+    gap: 6rem;
 
     p {
       text-align: left;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      padding: 0 4rem;
+    }
+  }
+
+  section {
+    padding: 4rem 0;
+    min-height: 100vh;
+    color: white;
+    background-color: $black;
+
+    .home-content {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .projects {
+        display: grid;
+        gap: 4rem;
+      }
     }
   }
 }
 
 @media (min-width: 1024px) {
   .home {
-    header {
+    .home-content {
+      padding: 0 6rem;
+    }
+
+    header > .home-content {
+      gap: 10rem;
+
       p {
         font-size: 3rem;
+      }
+    }
+
+    section {
+      .home-content {
+        h1 {
+          font-size: 8rem;
+        }
       }
     }
   }

@@ -8,7 +8,6 @@
 
 html,
 body {
-  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -18,7 +17,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  text-align: center;
   margin: auto;
   color: $black;
 }
