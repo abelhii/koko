@@ -25,7 +25,7 @@ export default defineComponent({
   },
   data() {
     return {
-      navOptions: ["HOME", "WORK", "ART", "ABOUT"],
+      navOptions: ["HOME", "ART", "ABOUT"],
       upArrow: false,
     };
   },

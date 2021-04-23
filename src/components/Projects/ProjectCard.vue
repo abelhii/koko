@@ -8,15 +8,14 @@
       <h1>{{ project.title }}</h1>
       <div class="arrow"></div>
     </router-link>
-    <h2 class="snippet">
+    <h3 class="snippet">
       {{ slicedDescription }}
-    </h2>
+    </h3>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
-import { kokoStore } from "@/main";
 
 export default defineComponent({
   name: "Project Card",
@@ -25,18 +24,12 @@ export default defineComponent({
       id: String,
       title: String,
       description: String,
-      route: String,
       required: true,
     } as any,
   },
   computed: {
     slicedDescription(): string | void {
       return this.project.description?.slice(0, 50);
-    },
-  },
-  methods: {
-    assignProject() {
-      kokoStore.setCurrentProject(this.project);
     },
   },
 });
@@ -61,7 +54,7 @@ export default defineComponent({
     display: flex;
     gap: 1rem;
     place-items: center;
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
     transition: color 0.1s ease-in-out;

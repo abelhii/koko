@@ -47,9 +47,7 @@ import { defineComponent } from "vue";
 import Scroll from "@/components/Scroll.vue";
 import DownArrow from "@/components/DownArrow.vue";
 import ProjectCard from "@/components/Projects/ProjectCard.vue";
-import { scrollMeTo } from "@/main";
-
-import projects from "@/assets/json/projects.json";
+import { kokoStore, scrollMeTo } from "@/main";
 
 export default defineComponent({
   name: "Home",
@@ -61,7 +59,7 @@ export default defineComponent({
   data() {
     return {
       scrollWord: "DESIGN USER INTERFACE USER EXPERIENCE BRANDING",
-      projects: projects,
+      projects: kokoStore.store.projects,
     };
   },
   methods: {

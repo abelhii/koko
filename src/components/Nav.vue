@@ -10,7 +10,12 @@
       </div>
       <ul v-bind:class="{ 'display-menu': openBurgerMenu }">
         <li v-for="option in navOptions" :key="option">
-          <span>{{ option }}</span>
+          <router-link
+            :to="{ name: option.toLowerCase(), params: null }"
+            v-on:click="openBurgerMenu = false"
+          >
+            {{ option }}
+          </router-link>
         </li>
       </ul>
     </div>
@@ -104,11 +109,13 @@ export default defineComponent({
       margin: 4rem 2rem;
       list-style: none;
 
-      li span {
+      li a {
         position: relative;
         font-weight: 500;
         font-size: 2rem;
         user-select: none;
+        color: $black;
+        text-decoration: none;
 
         &::after {
           content: "";
@@ -171,7 +178,7 @@ export default defineComponent({
         flex-direction: row;
         margin: 0;
 
-        li span {
+        li a {
           font-size: 1rem;
 
           &::after {

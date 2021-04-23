@@ -8,20 +8,11 @@ createApp(App)
   .mount("#app");
 
 export const kokoStore = {
-  debug: true,
-  state: {
-    project: {},
+  store: {
+    projects: projects,
   },
   getProjectById(projectId: string) {
-    return projects.find((x) => x.id === projectId);
-  },
-  setCurrentProject(project: any) {
-    if (this.debug) console.log("set current project", project);
-    this.state.project = project;
-  },
-  clearCurrentProject() {
-    if (this.debug) console.log("clearMessageAction triggered");
-    this.state.project = {};
+    return this.store.projects.find((x) => x.id === projectId);
   },
 };
 

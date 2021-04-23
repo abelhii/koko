@@ -33,8 +33,7 @@ export default defineComponent({
   methods: {
     getProject() {
       const projectId = this.$route.params.id;
-      this.project = { ...kokoStore.getProjectById(projectId) } as any;
-      console.log("PROJECt", this.project);
+      this.project = { ...kokoStore.getProjectById(projectId) };
     },
   },
   watch: {
@@ -50,11 +49,11 @@ export default defineComponent({
 
 .project {
   header .content {
-    background-color: #f3f3f3;
+    background-color: $light-grey;
     display: grid;
     justify-content: center;
     text-align: left;
-    padding: 4rem 0 !important;
+    padding: 4rem 2rem !important;
 
     h1 {
       font-size: 4rem;
