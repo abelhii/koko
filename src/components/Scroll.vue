@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-parent">
+  <div class="scroll-parent" alt="{{ scrollWord }}">
     <span class="scrolling">{{ scrollWord }}</span>
     <span class="scrolling">{{ scrollWord }}</span>
     <span class="scrolling">{{ scrollWord }}</span>

@@ -1,24 +1,42 @@
 <template>
-  <Nav :navOptions="navOptions" />
   <Scroll :scrollWord="scrollWord" />
   <div class="home">
-    <header>
-      <div class="home-content">
+    <header ref="header">
+      <div class="content">
         <p>
           Koko is a designer focused on creating user-centric experiences and
           meaningful identities.
         </p>
-        <DownArrow />
+        <DownArrow v-on:click="scrollTo('projects')" />
       </div>
     </header>
-    <section>
-      <div class="home-content">
+    <section ref="projects">
+      <div class="content">
         <h1>SELECTED PROJECTS</h1>
         <div class="projects">
-          <Project />
-          <Project />
-          <Project />
+          <div v-for="project in projects" :key="project">
+            <ProjectCard :project="project" />
+          </div>
         </div>
+      </div>
+    </section>
+    <section>
+      <div class="content">
+        <!-- <iframe
+          style="border: 1px solid rgba(0, 0, 0, 0.1);"
+          width="100%"
+          height="800"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FdvXGuRjuS0Fkis9FEJ96Ug%2FKoko%3Fnode-id%3D260%253A2"
+          allowfullscreen
+        ></iframe>
+
+        <iframe
+          style="border: 1px solid rgba(0, 0, 0, 0.1);"
+          width="100%"
+          height="800"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fe2szceIdxFcAdZe3i8kx84%2Fwireframe-1%3Fnode-id%3D38%253A182"
+          allowfullscreen
+        ></iframe> -->
       </div>
     </section>
   </div>
@@ -26,24 +44,31 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Nav from "@/components/Nav.vue";
 import Scroll from "@/components/Scroll.vue";
 import DownArrow from "@/components/DownArrow.vue";
-import Project from "@/components/Project.vue";
+import ProjectCard from "@/components/Projects/ProjectCard.vue";
+import { scrollMeTo } from "@/main";
+
+import projects from "@/assets/json/projects.json";
 
 export default defineComponent({
   name: "Home",
   components: {
-    Nav,
     Scroll,
     DownArrow,
-    Project,
+    ProjectCard,
   },
   data() {
     return {
-      navOptions: ["HOME", "WORK", "ART", "ABOUT"],
-      scrollWord: "USER INTERFACE USER EXPERIENCE",
+      scrollWord: "DESIGN USER INTERFACE USER EXPERIENCE BRANDING",
+      projects: projects,
     };
+  },
+  methods: {
+    scrollTo(refName: string) {
+      const element = this.$refs[refName] as HTMLElement;
+      scrollMeTo(element);
+    },
   },
 });
 </script>
@@ -57,13 +82,7 @@ export default defineComponent({
   height: 100%;
   margin: auto;
 
-  .home-content {
-    margin: auto;
-    max-width: $max-width;
-    padding: 0 4rem;
-  }
-
-  header > .home-content {
+  header > .content {
     display: grid;
     place-items: center;
     gap: 6rem;
@@ -81,7 +100,7 @@ export default defineComponent({
     color: white;
     background-color: $black;
 
-    .home-content {
+    .content {
       h1 {
         font-size: 2rem;
       }
@@ -96,11 +115,11 @@ export default defineComponent({
 
 @media (min-width: 1024px) {
   .home {
-    .home-content {
+    .content {
       padding: 0 6rem;
     }
 
-    header > .home-content {
+    header > .content {
       gap: 10rem;
 
       p {
@@ -109,7 +128,7 @@ export default defineComponent({
     }
 
     section {
-      .home-content {
+      .content {
         h1 {
           font-size: 8rem;
         }

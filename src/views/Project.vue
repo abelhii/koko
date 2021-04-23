@@ -1,0 +1,76 @@
+<template>
+  <div class="project">
+    <header>
+      <div class="content">
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.description }}</p>
+      </div>
+    </header>
+    <section>
+      <div class="content gallery">
+        <div class="pictures" v-for="picture in pictures" :key="picture">
+          <img src="{{picture.src}}" alt="" />
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script lang="ts">
+import { kokoStore } from "@/main";
+import { defineComponent } from "@vue/composition-api";
+
+export default defineComponent({
+  name: "Project",
+  data() {
+    return {
+      project: {},
+    };
+  },
+  created() {
+    this.getProject();
+  },
+  methods: {
+    getProject() {
+      const projectId = this.$route.params.id;
+      this.project = { ...kokoStore.getProjectById(projectId) } as any;
+      console.log("PROJECt", this.project);
+    },
+  },
+  watch: {
+    $route() {
+      this.getProject();
+    },
+  },
+});
+</script>
+
+<style lang="scss" scoped>
+@import "@/styles/_defaultVars.scss";
+
+.project {
+  header .content {
+    background-color: #f3f3f3;
+    display: grid;
+    justify-content: center;
+    text-align: left;
+    padding: 4rem 0 !important;
+
+    h1 {
+      font-size: 4rem;
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+  }
+
+  section .content.gallery {
+    .pictures {
+      display: grid;
+      gap: 2rem;
+    }
+  }
+}
+</style>

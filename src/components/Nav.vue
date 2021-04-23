@@ -1,9 +1,8 @@
 <template>
   <div class="nav">
-    <div class="logo">
-      KO <br />
-      KO
-    </div>
+    <router-link to="/">
+      <img src="@/assets/logo.svg" alt="KOKO" class="logo" />
+    </router-link>
     <div class="nav-options" v-bind:class="{ 'cover-screen': openBurgerMenu }">
       <div class="burger-menu" v-on:click="openBurgerMenu = !openBurgerMenu">
         <i class="fas fa-bars" v-if="!openBurgerMenu"></i>
@@ -46,19 +45,32 @@ export default defineComponent({
   max-width: $max-width;
 
   .logo {
+    cursor: pointer;
+    position: relative;
     display: flex;
     place-content: center;
     place-items: center;
     height: 3rem;
     width: 3rem;
     font-weight: 600;
-    border: 1px solid $black;
+    color: $black;
+    text-decoration: none;
+    transition: box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      box-shadow: 4px 4px 0px 1px $accent;
+    }
+    &:active {
+      box-shadow: none;
+    }
   }
 
   .nav-options {
     position: relative;
     text-transform: capitalize;
     text-align: right;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out;
 
     &.cover-screen {
       position: fixed;
@@ -67,8 +79,8 @@ export default defineComponent({
       min-height: 100%;
       min-width: 100%;
       z-index: 100;
-      color: white;
-      background-color: $black;
+      color: $black;
+      background-color: white;
 
       &:nth-child(n) {
         padding: 2rem;
@@ -82,10 +94,11 @@ export default defineComponent({
     }
 
     ul {
+      visibility: hidden;
       position: fixed;
       right: 0;
       bottom: 0;
-      display: none;
+      display: flex;
       flex-direction: column;
       gap: 2rem;
       margin: 4rem 2rem;
@@ -120,7 +133,7 @@ export default defineComponent({
     }
 
     .display-menu {
-      display: flex;
+      visibility: visible;
     }
   }
 }
@@ -153,8 +166,8 @@ export default defineComponent({
       }
 
       ul {
+        visibility: visible;
         position: initial;
-        display: flex;
         flex-direction: row;
         margin: 0;
 
