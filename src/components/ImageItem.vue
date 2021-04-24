@@ -5,9 +5,9 @@
   </figure>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "@vue/composition-api";
-import ImageSpinner from "./ImageSpinner";
+import ImageSpinner from "./ImageSpinner.vue";
 
 export default defineComponent({
   name: "ImageItem",

@@ -58,12 +58,6 @@ export default defineComponent({
     background-color: var(--background-color);
   }
 
-  &:hover {
-    .circle {
-      animation: waitForClick 0.75s infinite linear;
-    }
-  }
-
   &:active {
     .line,
     .circle {
@@ -73,6 +67,16 @@ export default defineComponent({
 
     .circle {
       animation: none;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .arrow {
+    &:hover {
+      .circle {
+        animation: waitForClick 0.75s infinite linear;
+      }
     }
   }
 }

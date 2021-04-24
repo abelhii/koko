@@ -1,6 +1,6 @@
 <template>
   <Nav ref="top" :navOptions="navOptions" />
-  <router-view />
+  <router-view class="router-view" />
   <div
     class="up-arrow"
     v-bind:class="{ display: upArrow }"
@@ -9,12 +9,14 @@
     <!-- <span>Go to top</span> -->
     <DownArrow :direction="'up'" :inverseColor="true" />
   </div>
+  <Footer class="footer" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
 import Nav from "@/components/Nav.vue";
 import DownArrow from "@/components/DownArrow.vue";
+import Footer from "@/components/Footer.vue";
 import { scrollMeTo } from "./main";
 
 export default defineComponent({
@@ -22,6 +24,7 @@ export default defineComponent({
   components: {
     Nav,
     DownArrow,
+    Footer,
   },
   data() {
     return {
@@ -46,7 +49,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import "styles/_fonts.scss";
 @import "styles/_defaultVars.scss";
 
 html,
@@ -56,17 +59,23 @@ body {
 }
 
 #app {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Gilroy", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
   margin: auto;
+  min-height: 100vh;
   color: $black;
+  background-color: $light-grey;
 
   .content {
     margin: auto;
     max-width: $max-width;
     padding: 0 2rem;
+  }
+
+  .router-view {
+    min-height: calc(100vh - 18rem);
   }
 
   .up-arrow {
@@ -85,6 +94,11 @@ body {
     &.display {
       opacity: 1;
     }
+  }
+
+  .footer {
+    background-color: $black;
+    padding: 4rem;
   }
 }
 

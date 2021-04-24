@@ -1,5 +1,5 @@
 export default {
-  mounted(el: HTMLElement) {
+  mounted(el: HTMLElement): void {
     function loadImage() {
       const imageElement = Array.from(el.children).find(
         (el) => el.nodeName === "IMG"
@@ -13,7 +13,7 @@ export default {
       }
     }
 
-    function handleIntersect(entries: any, observer: any) {
+    function handleIntersect(entries: any, observer: any): void {
       entries.forEach((entry: any) => {
         if (entry.isIntersecting) {
           loadImage();
@@ -22,7 +22,7 @@ export default {
       });
     }
 
-    function createObserver() {
+    function createObserver(): void {
       const options: IntersectionObserverInit = {
         root: null,
         rootMargin: "0%",
@@ -31,6 +31,7 @@ export default {
       const observer = new IntersectionObserver(handleIntersect, options);
       observer.observe(el);
     }
+
     if (window["IntersectionObserver"]) {
       createObserver();
     } else {

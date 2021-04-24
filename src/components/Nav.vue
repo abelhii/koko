@@ -9,12 +9,13 @@
         <i class="fas fa-times" v-if="openBurgerMenu"></i>
       </div>
       <ul v-bind:class="{ 'display-menu': openBurgerMenu }">
-        <li v-for="option in navOptions" :key="option">
-          <router-link
-            :to="{ name: option.toLowerCase(), params: null }"
-            v-on:click="openBurgerMenu = false"
-          >
-            {{ option }}
+        <li
+          v-for="option in navOptions"
+          :key="option"
+          v-on:click="openBurgerMenu = false"
+        >
+          <router-link :to="{ name: option.toLowerCase(), params: null }">
+            <span>{{ option }}</span>
           </router-link>
         </li>
       </ul>
@@ -117,13 +118,17 @@ export default defineComponent({
         color: $black;
         text-decoration: none;
 
+        span {
+          position: relative;
+          z-index: 1;
+        }
+
         &::after {
           content: "";
           position: absolute;
           right: 0;
           bottom: 0;
           width: 100%;
-          z-index: -1;
           opacity: 0;
           box-shadow: 0px -8px 0px 8px $accent;
           transition: 0.15s ease-in-out;

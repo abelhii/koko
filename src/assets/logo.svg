@@ -4,7 +4,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400');
     </style>
 </defs>
-<rect width="107" height="107" fill="white"/>
+<rect width="107" height="107" fill="none"/>
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat, sans-serif" font-weight="400" font-size="30" letter-spacing="0.55em"><tspan x="22.319" y="43.9642">KO&#10;</tspan><tspan x="22.319" y="85.9642">KO</tspan></text>
 <rect x="1.5" y="1.5" width="104" height="104" stroke="black" stroke-width="3"/>
 </svg>

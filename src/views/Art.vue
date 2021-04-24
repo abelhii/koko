@@ -31,7 +31,6 @@ export default defineComponent({
     this.importAll(
       require.context("../assets/images/art-images", true, /webp$/)
     );
-    console.log(this.artworks[0]);
   },
   methods: {
     importAll(r) {
@@ -63,7 +62,7 @@ header {
   gap: 2rem;
   row-gap: 4rem;
   grid-template-columns: 1fr;
-  margin: 4rem auto !important;
+  padding: 4rem 0 !important;
   overflow: hidden;
 
   .artwork {
@@ -97,12 +96,6 @@ header {
       position: relative;
       place-items: center;
 
-      .art-img {
-        &:hover {
-          filter: brightness(0.5);
-        }
-      }
-
       label {
         position: absolute;
         color: white;
@@ -111,6 +104,10 @@ header {
       }
 
       &:hover {
+        .art-img {
+          filter: brightness(0.5);
+        }
+
         label {
           opacity: 1;
         }

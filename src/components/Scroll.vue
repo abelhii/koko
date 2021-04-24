@@ -1,8 +1,7 @@
 <template>
   <div class="scroll-parent" alt="{{ scrollWord }}">
-    <span class="scrolling">{{ scrollWord }}</span>
-    <span class="scrolling">{{ scrollWord }}</span>
-    <span class="scrolling">{{ scrollWord }}</span>
+    <img class="scrolling" src="../assets/images/scroll.svg" />
+    <img class="scrolling" src="../assets/images/scroll.svg" />
   </div>
 </template>
 
@@ -18,19 +17,17 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$scroll-anim: scroll 20s infinite linear;
+$scroll-anim: 20s linear 0s infinite normal none running scroll;
 
 .scroll-parent {
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
-  width: 100%;
   overflow: hidden;
 
   .scrolling {
-    padding-left: 5rem;
-    font-size: 10rem;
-    font-weight: 700;
+    user-select: none;
+    min-height: 15rem;
     -webkit-animation: $scroll-anim;
     -moz-animation: $scroll-anim;
     -o-animation: $scroll-anim;
@@ -50,11 +47,11 @@ $scroll-anim: scroll 20s infinite linear;
 }
 
 @media (min-width: 1024px) {
-  $scroll-anim: scroll 30s infinite linear;
+  $scroll-anim: 50s linear 0s infinite normal none running scroll;
   .scroll-parent {
     .scrolling {
       padding-left: 10rem;
-      font-size: 30rem;
+      min-height: 40rem;
       -webkit-animation: $scroll-anim;
       -moz-animation: $scroll-anim;
       -o-animation: $scroll-anim;

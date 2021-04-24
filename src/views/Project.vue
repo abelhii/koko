@@ -51,7 +51,7 @@ export default defineComponent({
   header .content {
     background-color: $light-grey;
     display: grid;
-    justify-content: center;
+    justify-content: left;
     text-align: left;
     padding: 4rem 2rem !important;
 
@@ -62,6 +62,7 @@ export default defineComponent({
     p {
       font-size: 1.5rem;
       margin: 1rem 0;
+      max-width: 50ch;
     }
   }
 
