@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import projects from "@/assets/json/projects.json";
-// @ts-ignore
+
 import LazyLoadDirective from "@/directives/LazyLoadDirective.ts";
 
 createApp(App)
@@ -14,7 +14,7 @@ export const kokoStore = {
   store: {
     projects: projects,
   },
-  getProjectById(projectId: string) {
+  getProjectById(projectId: string): any {
     return this.store.projects.find((x) => x.id === projectId);
   },
 };

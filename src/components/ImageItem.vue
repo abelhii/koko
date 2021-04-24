@@ -27,6 +27,7 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 
     &.loaded {
       .image {

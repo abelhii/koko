@@ -13,9 +13,15 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "@vue/composition-api";
-import ImageItem from "@/components/ImageItem";
+import ImageItem from "@/components/ImageItem.vue";
+
+export interface IArtworks {
+  pathLong: string;
+  pathShort: string;
+  name: string;
+}
 
 export default defineComponent({
   name: "Art",
@@ -24,7 +30,7 @@ export default defineComponent({
   },
   data() {
     return {
-      artworks: [],
+      artworks: [] as IArtworks[],
     };
   },
   mounted() {
@@ -33,8 +39,13 @@ export default defineComponent({
     );
   },
   methods: {
-    importAll(r) {
-      r.keys().forEach((key) => {
+    /**
+     * Get's files from a given folder path and puts it in a javascript array
+     * @param r  require.context("../relative-path", true, /webp$/)
+     * @returns
+     */
+    importAll(r: any): void {
+      r.keys().forEach((key: string) => {
         this.artworks.push({
           pathLong: r(key),
           pathShort: key,
@@ -42,7 +53,7 @@ export default defineComponent({
         });
       });
     },
-    getName(path) {
+    getName(path: string): string {
       return path.split(new RegExp(/(?<=\.\/)(.*?)(?=.webp)/g))[1];
     },
   },
@@ -70,6 +81,7 @@ header {
     place-items: center;
     gap: 1rem;
     color: $black;
+    margin: 0 2rem;
 
     .art-img {
       object-fit: cover;
@@ -95,6 +107,7 @@ header {
     .artwork {
       position: relative;
       place-items: center;
+      margin: 0;
 
       label {
         position: absolute;

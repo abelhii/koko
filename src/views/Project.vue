@@ -1,16 +1,17 @@
 <template>
   <div class="project">
-    <header>
-      <div class="content">
-        <h1>{{ project.title }}</h1>
-        <p>{{ project.description }}</p>
-      </div>
+    <header class="content">
+      <h1>{{ project.title }}</h1>
+      <p>{{ project.description }}</p>
     </header>
-    <section>
-      <div class="content gallery">
-        <div class="pictures" v-for="picture in pictures" :key="picture">
-          <img src="{{picture.src}}" alt="" />
-        </div>
+    <section class="content gallery">
+      <div v-for="(image, index) in images" :key="(image, index)">
+        <ImageItem
+          class="project-img"
+          :id="`img-${index}`"
+          :source="getImgUrl(image.fileName)"
+          :alt="image.name"
+        />
       </div>
     </section>
   </div>
@@ -19,21 +20,61 @@
 <script lang="ts">
 import { kokoStore } from "@/main";
 import { defineComponent } from "@vue/composition-api";
+import ImageItem from "@/components/ImageItem.vue";
+
+export interface IProject {
+  id: string;
+  title: string;
+  description: string;
+  images: string[];
+}
+
+export interface IProjectImage {
+  name: string;
+  fileName: string;
+  whiteSection: boolean;
+}
 
 export default defineComponent({
   name: "Project",
+  components: {
+    ImageItem,
+  },
   data() {
     return {
-      project: {},
+      project: {} as IProject,
+      images: [] as IProjectImage[],
+      rootPath: "",
     };
   },
-  created() {
+  mounted() {
     this.getProject();
+    window.scrollTo(0, 0);
   },
   methods: {
-    getProject() {
+    getProject(): void {
       const projectId = this.$route.params.id;
       this.project = { ...kokoStore.getProjectById(projectId) };
+      this.constructImagePaths();
+    },
+    constructImagePaths(): void {
+      if (!this.project?.images) {
+        console.error("images don't exist");
+        return;
+      }
+
+      this.project.images.forEach((image: string) => {
+        const whiteSection = image.match(/-w$/g);
+        this.images.push({
+          name: image,
+          fileName: `${image}.webp`,
+          whiteSection: whiteSection !== null,
+        });
+      });
+    },
+    getImgUrl(fileName: string) {
+      return require(`../assets/images/project-images/${this.project.id}/` +
+        fileName);
     },
   },
   watch: {
@@ -48,12 +89,16 @@ export default defineComponent({
 @import "@/styles/_defaultVars.scss";
 
 .project {
-  header .content {
+  display: grid;
+  gap: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+
+  header.content {
     background-color: $light-grey;
     display: grid;
     justify-content: left;
     text-align: left;
-    padding: 4rem 2rem !important;
 
     h1 {
       font-size: 4rem;
@@ -66,10 +111,19 @@ export default defineComponent({
     }
   }
 
-  section .content.gallery {
-    .pictures {
-      display: grid;
-      gap: 2rem;
+  section.content.gallery {
+    display: grid;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project {
+    header.content {
+      padding: 4rem !important;
+    }
+    section.content.gallery {
+      gap: 6rem;
     }
   }
 }

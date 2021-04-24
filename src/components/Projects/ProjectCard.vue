@@ -9,7 +9,7 @@
       <div class="arrow"></div>
     </router-link>
     <h3 class="snippet">
-      {{ slicedDescription }}
+      {{ project.description }}
     </h3>
   </div>
 </template>
@@ -109,6 +109,7 @@ export default defineComponent({
     margin: 0;
     color: grey;
     font-weight: 500;
+    max-width: 50ch;
   }
 }
 

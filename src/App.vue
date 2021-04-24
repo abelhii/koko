@@ -98,7 +98,7 @@ body {
 
   .footer {
     background-color: $black;
-    padding: 4rem;
+    padding: 2rem;
   }
 }
 
@@ -106,6 +106,10 @@ body {
   #app {
     .content {
       padding: 0 4rem;
+    }
+
+    .footer {
+      padding: 4rem;
     }
   }
 }
