@@ -2,8 +2,11 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import projects from "@/assets/json/projects.json";
+// @ts-ignore
+import LazyLoadDirective from "@/directives/LazyLoadDirective.ts";
 
 createApp(App)
+  .directive("lazyload", LazyLoadDirective)
   .use(router)
   .mount("#app");
 
