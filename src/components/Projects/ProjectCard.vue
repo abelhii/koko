@@ -1,6 +1,14 @@
 <template>
   <div class="project-card">
-    <img src="https://source.unsplash.com/random" alt="Project Image" />
+    <ImageItem
+      class="project-img"
+      :source="
+        getImgUrl(project.featuredImage)
+          ? getImgUrl(project.featuredImage)
+          : 'https://source.unsplash.com/random'
+      "
+      :alt="project.title"
+    />
     <router-link
       class="title"
       :to="{ name: 'projects', params: { id: project.id } }"
@@ -16,20 +24,32 @@
 
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
+import ImageItem from "@/components/ImageItem.vue";
 
 export default defineComponent({
   name: "Project Card",
+  components: {
+    ImageItem,
+  },
   props: {
     project: {
       id: String,
       title: String,
       description: String,
+      featuredImage: String,
       required: true,
     } as any,
   },
   computed: {
     slicedDescription(): string | void {
       return this.project.description?.slice(0, 50);
+    },
+  },
+  methods: {
+    getImgUrl(fileName: string) {
+      if (!fileName) return;
+      return require(`../../assets/images/project-images/${this.project.id}/` +
+        fileName);
     },
   },
 });
@@ -42,10 +62,8 @@ export default defineComponent({
   --arrow-color: white;
   background-color: $black;
 
-  img {
+  .project-img {
     height: 200px;
-    width: 100%;
-    object-fit: cover;
   }
 
   .title {
@@ -136,7 +154,7 @@ export default defineComponent({
 
 @media (min-width: 1024px) {
   .project-card {
-    img {
+    .project-img {
       height: 600px;
     }
 
