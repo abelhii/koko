@@ -1,9 +1,9 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import projects from "@/assets/json/projects.json";
+import LazyLoadDirective from "./directives/LazyLoadDirective";
 
-import LazyLoadDirective from "@/directives/LazyLoadDirective.ts";
+import projects from "@/assets/json/projects.json";
 
 createApp(App)
   .directive("lazyload", LazyLoadDirective)

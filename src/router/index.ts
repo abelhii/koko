@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createMemoryHistory, createRouter, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Project from "../views/Project.vue";
 
@@ -28,13 +28,13 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/:pathMatch(.*)*",
+    path: "/:pathMatch(.*)",
     redirect: "/",
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createMemoryHistory(),
   routes,
 });
 

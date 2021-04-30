@@ -17,7 +17,7 @@
       <div class="arrow"></div>
     </router-link>
     <h3 class="snippet">
-      {{ project.description }}
+      {{ slicedDescription }}
     </h3>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default defineComponent({
   },
   computed: {
     slicedDescription(): string | void {
-      return this.project.description?.slice(0, 50);
+      return this.project.description?.slice(0, 185) + "...";
     },
   },
   methods: {
