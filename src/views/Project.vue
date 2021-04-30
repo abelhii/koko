@@ -4,8 +4,12 @@
       <h1>{{ project.title }}</h1>
       <p>{{ project.description }}</p>
     </header>
-    <section class="content gallery">
-      <div v-for="(image, index) in images" :key="(image, index)">
+    <section class="gallery">
+      <div
+        :style="{ background: image.bgColor }"
+        v-for="(image, index) in images"
+        :key="(image, index)"
+      >
         <div v-if="image.name">
           <ImageItem
             class="project-img"
@@ -42,15 +46,15 @@ export interface IProject {
   title: string;
   description: string;
   featuredImage: string;
-  images: { break: string; name: string; pics: string[] }[];
+  images: IProjectImage[];
 }
 
 export interface IProjectImage {
   name: string;
   fileName: string;
   pics: string[];
-  whiteSection: boolean;
   break: string;
+  bgColor: string;
 }
 
 export default defineComponent({
@@ -81,18 +85,15 @@ export default defineComponent({
         return;
       }
 
-      this.project.images.forEach(
-        (image: { break: string; name: string; pics: string[] }) => {
-          const whiteSection = image.name?.match?.(/-w$/g);
-          this.images.push({
-            name: image.name,
-            fileName: `${image.name}.webp`,
-            pics: image.pics,
-            whiteSection: whiteSection !== null,
-            break: image.break,
-          });
-        }
-      );
+      this.project.images.forEach((image): void => {
+        this.images.push({
+          name: image.name,
+          fileName: `${image.name}.webp`,
+          pics: image.pics,
+          break: image.break,
+          bgColor: image.bgColor,
+        });
+      });
     },
     getImgUrl(fileName: string) {
       return require(`../assets/images/project-images/${this.project.id}/` +
@@ -128,15 +129,25 @@ export default defineComponent({
       margin: 1rem 0;
     }
     p {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin: 1rem 0;
       max-width: 50ch;
     }
   }
 
-  section.content.gallery {
+  section.gallery {
     display: grid;
     gap: 2rem;
+
+    > :nth-child(n) {
+      display: flex;
+      padding: 0 2rem;
+      justify-content: center;
+
+      > :nth-child(n) {
+        max-width: $max-width;
+      }
+    }
 
     .break {
       padding-top: 4rem;
@@ -145,22 +156,31 @@ export default defineComponent({
     }
     .pics {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       gap: 2rem;
     }
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .project {
     header.content {
       padding: 4rem !important;
+
+      p {
+        font-size: 1.5rem;
+      }
     }
-    section.content.gallery {
+    section.gallery {
       gap: 6rem;
 
       .break {
+        margin-bottom: -4rem;
         font-size: 1.5rem;
+      }
+      .pics {
+        flex-direction: row;
       }
     }
   }

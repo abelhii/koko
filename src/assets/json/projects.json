@@ -21,19 +21,20 @@
         "break": "Alternative colour palette"
       },
       {
-        "name": "mint_chow",
+        "name": "orange_chow",
         "pics": ["2-1.webp", "2-2.webp"]
       },
       {
-        "name": "mint_chow",
+        "name": "orange_chow",
         "pics": ["2-3.webp", "2-4.webp"]
       },
       {
-        "name": "mint_chow",
+        "name": "orange_chow",
         "pics": ["2-5.webp", "2-6.webp"]
       },
       {
-        "name": "chow_typography"
+        "name": "chow_typography",
+        "bgColor": "white"
       },
       {
         "name": "chow_colour_palette"
@@ -60,7 +61,8 @@
         "name": "ZB_home_page"
       },
       {
-        "name": "ZB_typography-w"
+        "name": "ZB_typography",
+        "bgColor": "white"
       },
       {
         "name": "ZB_colour_palette"
