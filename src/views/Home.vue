@@ -20,25 +20,6 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="content">
-        <!-- <iframe
-          style="border: 1px solid rgba(0, 0, 0, 0.1);"
-          width="100%"
-          height="800"
-          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FdvXGuRjuS0Fkis9FEJ96Ug%2FKoko%3Fnode-id%3D260%253A2"
-          allowfullscreen
-        ></iframe>
-
-        <iframe
-          style="border: 1px solid rgba(0, 0, 0, 0.1);"
-          width="100%"
-          height="800"
-          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fe2szceIdxFcAdZe3i8kx84%2Fwireframe-1%3Fnode-id%3D38%253A182"
-          allowfullscreen
-        ></iframe> -->
-      </div>
-    </section>
   </div>
 </template>
 

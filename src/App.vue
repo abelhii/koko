@@ -1,5 +1,6 @@
 <template>
-  <Nav ref="top" :navOptions="navOptions" />
+  <div ref="top"></div>
+  <Nav :navOptions="navOptions" />
   <router-view class="router-view" />
   <div
     class="up-arrow"
@@ -41,7 +42,7 @@ export default defineComponent({
       scrollMeTo(element);
     },
     handleScroll() {
-      if (window.scrollY >= 1500) this.upArrow = true;
+      if (window.scrollY >= 1250) this.upArrow = true;
       else this.upArrow = false;
     },
   },

@@ -2,7 +2,43 @@
   {
     "id": "chow",
     "title": "Chow",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ut magna aenean."
+    "description": "This app is a personal project and is a work in progress. The idea was simple, build something that would help people decide on what to eat. Chow chooses a random eatery nearby the user's current location. \n\nAn app that enables users to explore restaurants they wouldn't normally try, which in turn, generates traffic to more obscure local restaurants which, I hope, can help to enrich local communities.",
+    "featuredImage": "1-1.webp",
+    "images": [
+      {
+        "name": "mint_chow",
+        "pics": ["1-1.webp", "1-2.webp"]
+      },
+      {
+        "name": "mint_chow",
+        "pics": ["1-3.webp", "1-4.webp"]
+      },
+      {
+        "name": "mint_chow",
+        "pics": ["1-5.webp", "1-6.webp"]
+      },
+      {
+        "break": "Alternative colour palette"
+      },
+      {
+        "name": "mint_chow",
+        "pics": ["2-1.webp", "2-2.webp"]
+      },
+      {
+        "name": "mint_chow",
+        "pics": ["2-3.webp", "2-4.webp"]
+      },
+      {
+        "name": "mint_chow",
+        "pics": ["2-5.webp", "2-6.webp"]
+      },
+      {
+        "name": "chow_typography"
+      },
+      {
+        "name": "chow_colour_palette"
+      }
+    ]
   },
   {
     "id": "flux28",
@@ -18,14 +54,26 @@
     "id": "zbllc",
     "title": "ZB LLC",
     "description": "ZB LLC is an agency run by a small team of mostly oursourced talent, on a project basis. The company mostly focuses on marketing and providing web design and development for clients.",
-    "featuredImage": "ZB_logo.webp",
+    "featuredImage": "ZB_home_page.webp",
     "images": [
-      "ZB_home_page",
-      "ZB_typography-w",
-      "ZB_colour_palette",
-      "ZB_case_study_page",
-      "ZB_contact_form",
-      "ZB_logo"
+      {
+        "name": "ZB_home_page"
+      },
+      {
+        "name": "ZB_typography-w"
+      },
+      {
+        "name": "ZB_colour_palette"
+      },
+      {
+        "name": "ZB_case_study_page"
+      },
+      {
+        "name": "ZB_contact_form"
+      },
+      {
+        "name": "ZB_logo"
+      }
     ]
   }
 ]
