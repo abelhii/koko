@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-parent" alt="{{ scrollWord }}">
+  <div class="scroll-parent" :alt="scrollWord">
     <img class="scrolling" src="../assets/images/scroll.svg" />
     <img class="scrolling" src="../assets/images/scroll.svg" />
   </div>

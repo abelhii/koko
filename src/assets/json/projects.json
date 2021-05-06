@@ -43,8 +43,36 @@
   },
   {
     "id": "flux28",
-    "title": "Flux 28",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et ut magna aenean."
+    "title": "Flux28",
+    "description": "FLUX28©️ Studio is a multidisciplinary company with a team of filmmakers and multimedia artists working together to create substantial image and voice for many known brands. \n\nThey thrive on honouring creative pursuits and design aesthetics to fit client’s goals on having high quality production. I helped them design their website",
+    "featuredImage": "Home 1.webp",
+    "images": [
+      {
+        "name": "Home 1"
+      },
+      {
+        "name": "Home 2"
+      },
+      {
+        "name": "Video"
+      },
+      {
+        "name": "Video preview"
+      },
+      {
+        "name": "Art"
+      },
+      {
+        "name": "3D"
+      },
+      {
+        "name": "3D preview"
+      },
+      {
+        "name": "Flux28 typography",
+        "bgColor": "white"
+      }
+    ]
   },
   {
     "id": "adeasy",
@@ -53,8 +81,8 @@
   },
   {
     "id": "zbllc",
-    "title": "ZB LLC",
-    "description": "ZB LLC is an agency run by a small team of mostly oursourced talent, on a project basis. The company mostly focuses on marketing and providing web design and development for clients.",
+    "title": "ZB",
+    "description": "ZB LLC is an agency run by a small team of oursourced talent, on a project basis. The company mostly focuses on marketing and providing web design and development for clients. \n\nI worked with them on their company rebranding, revamping their website and worked with many of their clients as an outsourced designer.",
     "featuredImage": "ZB_home_page.webp",
     "images": [
       {

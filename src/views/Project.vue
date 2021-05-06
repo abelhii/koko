@@ -140,11 +140,13 @@ export default defineComponent({
     gap: 2rem;
 
     > :nth-child(n) {
+      // v-for
       display: flex;
       padding: 0 2rem;
       justify-content: center;
 
       > :nth-child(n) {
+        // inner div
         max-width: $max-width;
       }
     }
