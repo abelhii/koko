@@ -10,7 +10,7 @@
     <!-- <span>Go to top</span> -->
     <DownArrow :direction="'up'" :inverseColor="true" />
   </div>
-  <Footer class="footer" />
+  <Footer />
 </template>
 
 <script lang="ts">
@@ -96,21 +96,12 @@ body {
       opacity: 1;
     }
   }
-
-  .footer {
-    background-color: $black;
-    padding: 2rem;
-  }
 }
 
 @media (min-width: 1024px) {
   #app {
     .content {
       padding: 0 4rem;
-    }
-
-    .footer {
-      padding: 4rem;
     }
   }
 }

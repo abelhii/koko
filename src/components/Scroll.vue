@@ -17,7 +17,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-$scroll-anim: 20s linear 0s infinite normal none running scroll;
+$scroll-anim: 35s linear 0s infinite normal none running scroll;
 
 .scroll-parent {
   display: flex;
