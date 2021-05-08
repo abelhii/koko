@@ -811,15 +811,15 @@ export default defineComponent({
       });
       gsap.to(dom.innerFace, {
         yPercent: yHigh / 3,
-        xPercent: x / 3.5,
+        xPercent: x / 4,
       });
       gsap.to([dom.glasses, dom.cheeks], {
         yPercent: yHigh / 6,
-        xPercent: x / 10,
+        xPercent: x / 8,
       });
       gsap.to(dom.bangs, {
         yPercent: yHigh / 100,
-        xPercent: x / 40,
+        xPercent: x / 35,
       });
       gsap.to(dom.shadow, {
         yPercent: (yLow / 40) * -1,

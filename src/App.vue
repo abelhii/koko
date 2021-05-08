@@ -7,8 +7,7 @@
     v-bind:class="{ display: upArrow }"
     v-on:click="scrollTo('top')"
   >
-    <!-- <span>Go to top</span> -->
-    <DownArrow :direction="'up'" :inverseColor="true" />
+    <UpArrow />
   </div>
   <Footer />
 </template>
@@ -16,7 +15,7 @@
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
 import Nav from "@/components/Nav.vue";
-import DownArrow from "@/components/DownArrow.vue";
+import UpArrow from "@/components/UpArrow.vue";
 import Footer from "@/components/Footer.vue";
 import { scrollMeTo } from "./main";
 
@@ -24,7 +23,7 @@ export default defineComponent({
   name: "App",
   components: {
     Nav,
-    DownArrow,
+    UpArrow,
     Footer,
   },
   data() {
@@ -82,12 +81,11 @@ body {
   .up-arrow {
     cursor: pointer;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: 2rem;
+    bottom: 1rem;
     margin-bottom: 2rem;
-    display: flex;
-    align-items: flex-end;
     color: white;
+    mix-blend-mode: exclusion;
 
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
@@ -102,6 +100,10 @@ body {
   #app {
     .content {
       padding: 0 4rem;
+    }
+
+    .up-arrow {
+      right: 4rem;
     }
   }
 }

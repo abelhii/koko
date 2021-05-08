@@ -131,6 +131,17 @@ export default defineComponent({
   }
 }
 
+@media (min-width: 1024px) {
+  .project-card {
+    .title > h1 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 @keyframes hoverBounce {
   0% {
     transform: translateX(0);

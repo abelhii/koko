@@ -68,6 +68,7 @@ footer {
     .content {
       max-width: $max-width;
       margin: auto;
+      padding: 0 !important;
     }
 
     .socials {

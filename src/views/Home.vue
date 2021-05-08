@@ -111,6 +111,10 @@ export default defineComponent({
         h1 {
           font-size: 8rem;
         }
+
+        .projects {
+          gap: 8rem;
+        }
       }
     }
   }

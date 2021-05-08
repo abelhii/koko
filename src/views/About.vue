@@ -11,6 +11,32 @@
         <MiniKoko class="mini-koko" />
       </div>
     </header>
+    <section>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+          assumenda tenetur enim, aspernatur mollitia suscipit exercitationem
+          iure voluptas in, culpa excepturi hic ad dicta, velit cupiditate! Cum
+          placeat ratione vero a aliquam facilis? Consequatur totam eum
+          quibusdam exercitationem dolorem. Molestiae quia fugiat sit ab!
+        </p>
+        <p>
+          Consectetur nemo ex blanditiis totam natus dolore maxime eligendi
+          accusantium laboriosam dolor! In modi sed, veniam sapiente nam debitis
+          rerum, rem consequatur, non dicta animi ipsa optio beatae facilis
+          molestias fugit ad repellendus esse repellat iusto saepe labore minima
+          dolore aliquid? Dolorum, delectus eum quasi adipisci fuga error
+          placeat, molestias magnam ullam accusantium iste eos temporibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+          assumenda tenetur enim, aspernatur mollitia suscipit exercitationem
+          iure voluptas in, culpa excepturi hic ad dicta, velit cupiditate! Cum
+          placeat ratione vero a aliquam facilis? Consequatur totam eum
+          quibusdam exercitationem dolorem. Molestiae quia fugiat sit ab!
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -48,6 +74,21 @@ export default defineComponent({
       margin: 1rem 0;
     }
   }
+
+  section {
+    background-color: white;
+    min-height: 40vh;
+    margin-top: 4rem;
+    padding: 2rem;
+
+    .content {
+      p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 2rem;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -65,6 +106,10 @@ export default defineComponent({
       .mini-koko {
         width: 100%;
       }
+    }
+
+    section {
+      padding: 4rem;
     }
   }
 }
