@@ -1,11 +1,11 @@
 <template>
-  <Scroll :scrollWord="scrollWord" />
   <div class="home">
     <header ref="header">
       <div class="content">
+        <Scroll class="scroll-text" :scrollWord="scrollWord" />
         <p>
-          Koko is a designer focused on creating user-centric experiences and
-          meaningful identities.
+          <span data-tooltip="Wardah">Koko</span> is a designer focused on
+          creating user-centric experiences and meaningful identities.
         </p>
         <DownArrow v-on:click="scrollTo('projects')" />
       </div>
@@ -57,19 +57,33 @@ export default defineComponent({
 
 .home {
   display: grid;
-  gap: 4rem;
   height: 100%;
   margin: auto;
 
-  header > .content {
-    display: grid;
-    place-items: center;
-    gap: 6rem;
+  header {
+    min-height: calc(100vh - 112px); // header height
+    overflow: hidden;
 
-    p {
-      text-align: left;
-      font-size: 1.5rem;
-      font-weight: 600;
+    > .content {
+      display: grid;
+      place-items: center;
+      height: 100%;
+
+      p {
+        text-align: left;
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        span {
+          color: $dark-blue;
+          cursor: pointer;
+        }
+      }
+
+      :last-child {
+        align-self: end;
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -99,8 +113,6 @@ export default defineComponent({
     }
 
     header > .content {
-      gap: 10rem;
-
       p {
         font-size: 3rem;
       }

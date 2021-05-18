@@ -96,6 +96,27 @@ body {
   }
 }
 
+/* Tooltips */
+[data-tooltip]:before {
+  position: absolute;
+  content: attr(data-tooltip);
+  font-size: 1.5rem;
+  color: $black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  box-shadow: 4px 4px 0px $accent;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+
+[data-tooltip]:hover:before {
+  opacity: 1;
+  background: #fff;
+  margin-top: -56px;
+  margin-left: -0.5rem;
+}
+
 @media (min-width: 1024px) {
   #app {
     .content {

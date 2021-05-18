@@ -3,7 +3,7 @@
     <header>
       <div class="content">
         <h1>
-          I'm Koko, a<br />
+          <span data-tooltip="Wardah">Koko</span> is a<br />
           multidisciplinary <br />
           designer.
         </h1>
@@ -14,26 +14,30 @@
     <section>
       <div class="content">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
-          assumenda tenetur enim, aspernatur mollitia suscipit exercitationem
-          iure voluptas in, culpa excepturi hic ad dicta, velit cupiditate! Cum
-          placeat ratione vero a aliquam facilis? Consequatur totam eum
-          quibusdam exercitationem dolorem. Molestiae quia fugiat sit ab!
+          As an ardent believer in the power of human-centered design, I am
+          fascinated by user interaction and people-based problem-solving. I
+          approach design empathetically and focus on understanding the latent
+          needs and emotions of the people I am designing for, aiming to create
+          clear, impactful solutions to enrich their lives.
         </p>
         <p>
-          Consectetur nemo ex blanditiis totam natus dolore maxime eligendi
-          accusantium laboriosam dolor! In modi sed, veniam sapiente nam debitis
-          rerum, rem consequatur, non dicta animi ipsa optio beatae facilis
-          molestias fugit ad repellendus esse repellat iusto saepe labore minima
-          dolore aliquid? Dolorum, delectus eum quasi adipisci fuga error
-          placeat, molestias magnam ullam accusantium iste eos temporibus.
+          I have worked on projects in UI UX, web and app design, branding, and
+          identity, and I previously worked in digital and print design. I enjoy
+          collaboration, analog and digital experimentation, and learning about
+          new tools and approaches to enhance my design process.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
-          assumenda tenetur enim, aspernatur mollitia suscipit exercitationem
-          iure voluptas in, culpa excepturi hic ad dicta, velit cupiditate! Cum
-          placeat ratione vero a aliquam facilis? Consequatur totam eum
-          quibusdam exercitationem dolorem. Molestiae quia fugiat sit ab!
+          Outside of design, my interests include sketching and painting,
+          miniature clay modeling, gaming, traveling, researching new
+          technologies, and music/podcasts.
+        </p>
+        <p>
+          Do you want to work together or say hi?
+          <a href="mailto:koko.wk@outlook.com">Let's chat!</a> :)
+        </p>
+        <p>
+          If you are interested to know more about my experience and education,
+          click on my resume linked below.
         </p>
       </div>
     </section>
@@ -67,6 +71,11 @@ export default defineComponent({
       font-size: 3rem;
       margin: 1rem 0;
       word-break: break-word;
+
+      span {
+        cursor: pointer;
+        color: $dark-blue;
+      }
     }
 
     p {
@@ -86,6 +95,11 @@ export default defineComponent({
         font-size: 1.25rem;
         font-weight: 300;
         line-height: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $dark-blue;
       }
     }
   }

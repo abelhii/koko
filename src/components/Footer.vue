@@ -22,14 +22,14 @@
         />
       </div>
     </section>
-    <!-- <section class="bottom">
-      <p class="content">
+    <section class="bottom">
+      <small class="content">
         Made with 🧡 by
-        <a href="https://abelhii.com" target="_blank" rel="noopener noreferrer"
-          >abelhii.com</a
-        >
-      </p>
-    </section> -->
+        <a href="https://abelhii.com" target="_blank" rel="noopener noreferrer">
+          Abel
+        </a>
+      </small>
+    </section>
   </footer>
 </template>
 
@@ -60,7 +60,7 @@ footer {
 
       .content,
       a {
-        color: white;
+        color: $grey;
         margin: 0;
       }
     }

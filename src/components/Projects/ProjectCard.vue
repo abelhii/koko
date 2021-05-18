@@ -125,7 +125,7 @@ export default defineComponent({
 
   .snippet {
     margin: 0;
-    color: grey;
+    color: $grey;
     font-weight: 500;
     max-width: 50ch;
   }

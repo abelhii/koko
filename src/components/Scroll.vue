@@ -51,7 +51,7 @@ $scroll-anim: 35s linear 0s infinite normal none running scroll;
   .scroll-parent {
     .scrolling {
       padding-left: 10rem;
-      min-height: 40rem;
+      min-height: 40vh;
       -webkit-animation: $scroll-anim;
       -moz-animation: $scroll-anim;
       -o-animation: $scroll-anim;
