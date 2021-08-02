@@ -4,7 +4,7 @@
       <h1>{{ project.title }}</h1>
       <p>{{ project.description }}</p>
     </header>
-    <section class="gallery">
+    <section class="gallery" v-if="images.length > 0">
       <div
         :style="{ background: image.bgColor }"
         v-for="(image, index) in images"
@@ -17,6 +17,7 @@
             :id="`img-${index}`"
             :source="getImgUrl(image.fileName)"
             :alt="image.name"
+            :imageStyle="'border-radius: 4px'"
           />
           <div class="pics" v-if="image.pics">
             <ImageItem
@@ -25,6 +26,7 @@
               :key="pic"
               :source="getImgUrl(pic)"
               :alt="image.name"
+              :imageStyle="'border-radius: 4px'"
             />
           </div>
         </div>
@@ -71,13 +73,14 @@ export default defineComponent({
   },
   mounted() {
     this.getProject();
-    window.scrollTo(0, 0);
   },
   methods: {
     getProject(): void {
+      this.images.length = 0;
       const projectId = this.$route.params.id;
       this.project = { ...kokoStore.getProjectById(projectId) };
-      this.constructImagePaths();
+      setTimeout(() => this.constructImagePaths());
+      window.scrollTo(0, 0);
     },
     constructImagePaths(): void {
       if (!this.project?.images) {

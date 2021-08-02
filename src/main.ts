@@ -17,6 +17,16 @@ export const kokoStore = {
   getProjectById(projectId: string): any {
     return this.store.projects.find((x) => x.id === projectId);
   },
+  getNextProject(projectId: string): any {
+    const index = this.store.projects.findIndex((x) => x.id === projectId);
+    return this.store.projects[index + 1] ?? this.store.projects[0];
+  },
+  getPrevProject(projectId: string): any {
+    const index = this.store.projects.findIndex((x) => x.id === projectId);
+    return index - 1 >= 0
+      ? this.store.projects[index - 1]
+      : this.store.projects[this.store.projects.length - 1];
+  },
 };
 
 export function scrollMeTo(element: HTMLElement): void {

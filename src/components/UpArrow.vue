@@ -1,7 +1,7 @@
 <template>
-  <div class="pointed-arrow">
+  <div class="arrow-circle">
     <div class="arrow"></div>
-    <span>TOP</span>
+    <strong>TOP</strong>
   </div>
 </template>
 
@@ -16,56 +16,34 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "@/styles/_defaultVars.scss";
 
-.pointed-arrow {
-  --arrow-color: white;
-  position: relative;
+.arrow-circle {
   display: grid;
-  transform: rotate(-90deg) scale(1, -1);
-  padding-bottom: 7rem; // for the word "Top"
-  transition: 0.15s;
+  place-content: center;
+  place-items: center;
+  padding: 1rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: $short-shadow;
 
-  &:active,
   &:hover {
-    color: $accent;
-    .arrow {
-      &:before {
-        background-color: $accent;
-      }
-      &:after {
-        border-color: transparent transparent transparent $accent;
-      }
-    }
+    box-shadow: 4px 4px 2px 0px $accent;
   }
 
-  span {
-    position: absolute;
-    top: 1px;
-    left: -45px;
-    font-size: 2rem;
-    font-weight: 600;
-    transform: scale(-1, 1);
+  &:active {
+    color: $accent;
+    box-shadow: inset 1px 1px 4px 0px $accent;
   }
 
   .arrow {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 66px;
-      height: 5px;
-      background-color: var(--arrow-color);
-    }
-    &::after {
-      content: "";
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 10px 0 10px 20px;
-      border-color: transparent transparent transparent var(--arrow-color);
-    }
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 0.25rem;
+    border-left-width: 0.25rem;
+    border-bottom: 0.5rem solid black;
   }
 }
 </style>

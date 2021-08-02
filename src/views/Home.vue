@@ -121,7 +121,7 @@ export default defineComponent({
     section {
       .content {
         h1 {
-          font-size: 8rem;
+          font-size: 4rem;
         }
 
         .projects {

@@ -4,12 +4,16 @@
   <router-view class="router-view" />
   <div
     class="up-arrow"
+    ref="upArrow"
     v-bind:class="{ display: upArrow }"
     v-on:click="scrollTo('top')"
   >
     <UpArrow />
   </div>
-  <Footer />
+  <Footer v-if="!isProject" />
+  <div ref="projectFooter" v-if="isProject">
+    <ProjectFooter />
+  </div>
 </template>
 
 <script lang="ts">
@@ -17,6 +21,7 @@ import { defineComponent } from "@vue/composition-api";
 import Nav from "@/components/Nav.vue";
 import UpArrow from "@/components/UpArrow.vue";
 import Footer from "@/components/Footer.vue";
+import ProjectFooter from "@/components/Projects/ProjectFooter.vue";
 import { scrollMeTo } from "./main";
 
 export default defineComponent({
@@ -25,15 +30,22 @@ export default defineComponent({
     Nav,
     UpArrow,
     Footer,
+    ProjectFooter,
   },
   data() {
     return {
       navOptions: ["HOME", "ART", "ABOUT"],
       upArrow: false,
+      isProject: false,
     };
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
+  },
+  watch: {
+    $route() {
+      this.isProject = this.$route.path.includes("projects");
+    },
   },
   methods: {
     scrollTo(refName: string) {
@@ -43,6 +55,23 @@ export default defineComponent({
     handleScroll() {
       if (window.scrollY >= 1250) this.upArrow = true;
       else this.upArrow = false;
+
+      const projectFooter = this.$refs.projectFooter;
+      const upArrowElem = this.$refs.upArrow;
+      if (!projectFooter || !upArrowElem) return;
+      if (this.isInView(projectFooter)) {
+        const rect = projectFooter.getBoundingClientRect();
+        upArrowElem.style.bottom = `${window.innerHeight - rect.top - 20}px`;
+      } else {
+        upArrowElem.style.bottom = "2rem";
+      }
+    },
+    isInView(el: HTMLElement) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top + 32 <=
+        (window.innerHeight || document.documentElement.clientHeight)
+      );
     },
   },
 });
@@ -82,9 +111,7 @@ body {
     cursor: pointer;
     position: fixed;
     right: 2rem;
-    bottom: 1rem;
-    margin-bottom: 2rem;
-    color: white;
+    bottom: 2rem;
     mix-blend-mode: exclusion;
 
     opacity: 0;
@@ -125,6 +152,7 @@ body {
 
     .up-arrow {
       right: 4rem;
+      bottom: 4rem;
     }
   }
 }

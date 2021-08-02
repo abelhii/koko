@@ -17,7 +17,7 @@
       <div class="arrow"></div>
     </router-link>
     <h3 class="snippet">
-      {{ slicedDescription }}
+      {{ project.intro }}
     </h3>
   </div>
 </template>
@@ -35,6 +35,7 @@ export default defineComponent({
     project: {
       id: String,
       title: String,
+      intro: String,
       description: String,
       featuredImage: String,
       required: true,

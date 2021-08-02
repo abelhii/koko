@@ -22,14 +22,14 @@
         />
       </div>
     </section>
-    <section class="bottom">
+    <!-- <section class="bottom">
       <small class="content">
         Made with 🧡 by
         <a href="https://abelhii.com" target="_blank" rel="noopener noreferrer">
           Abel
         </a>
       </small>
-    </section>
+    </section> -->
   </footer>
 </template>
 

@@ -21,15 +21,16 @@ export default defineComponent({
 
 .icon {
   position: relative;
-  padding: 1rem;
-  height: 1rem;
-  width: 1rem;
+  padding: 0.75rem;
+  height: 0.75rem;
+  width: 0.75rem;
   border-radius: 50%;
   background-color: white;
   color: $black;
   transition: box-shadow 0.3s ease-in-out;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-decoration: none;
   box-shadow: $short-shadow;
 
