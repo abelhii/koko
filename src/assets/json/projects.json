@@ -3,7 +3,7 @@
     "id": "chow",
     "title": "Chow",
     "intro": "An intuitive app to pick a random eatery or discover new places and try something different every time.",
-    "description": "Chow app is a personal project I worked on with a developer (who is my partner). It is still a work in progress. The idea was simple, build something that would help people decide on what to eat. Chow chooses a random eatery nearby the user's current location. \n\nWe aimed to make the app fun, fresh and simple to use. Users can operate the app, both with and without signing up with us, making it accessible to everyone. Initially, we only wanted to add restaurants in the search results but, we decided to expand the search across more categories like cafes, bakeries, bars, etc. Why? We thought, if we were to use an app like Chow, we'd want to be able to search more than just restaurants. \n\nChow is an app that enables users to explore restaurants they wouldn't usually try, which could help generate traffic to more obscure local restaurants, which, I hope, can help to enrich local communities.",
+    "description": "Chow app is a personal project that is still in development. The idea was simple, build something that would help people decide on what to eat. Chow chooses a random eatery nearby the user's current location. \n\nWe aimed to make the app fun, fresh and simple to use. Users can operate the app, both with and without signing up with us, making it accessible to everyone. Initially, we only wanted to add restaurants in the search results but, we decided to expand the search across more categories like cafes, bakeries, bars, etc. Why? We thought, if we were to use an app like Chow, we'd want to be able to search more than just restaurants. \n\nChow is an app that enables users to explore restaurants they wouldn't usually try, which could help generate traffic to more obscure local restaurants, which, I hope, can help to enrich local communities.",
     "featuredImage": "cover.webp",
     "images": [
       {
@@ -81,7 +81,7 @@
     "id": "adeasy",
     "title": "AdEasy",
     "intro": "New and improved ways to advertise offline and online. Readily available for all types of businesses. Analytics to assist in setting up a bulletproof marketing strategy. ",
-    "description": "Adeasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, websites, and much more. \n\nI worked with AdEasy as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, implement a new brand guideline across the company, create a UI components library (design system) to be used for consistent design and development on the website and dashboard and help improve the overall user experience of the website and dashboard.",
+    "description": "AdEasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, websites, and much more. \n\nI worked with AdEasy as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, implement a new brand guideline across the company, create a UI components library (design system) to be used for consistent design and development on the website and dashboard and help improve the overall user experience of the website and dashboard.",
     "featuredImage": "cover.webp",
     "images": [
       {
