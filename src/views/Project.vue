@@ -6,8 +6,9 @@
     </header>
     <section class="gallery" v-if="images.length > 0">
       <div
-        :style="{ background: image.bgColor }"
         v-for="(image, index) in images"
+        :style="{ background: image.bgColor }"
+        :class="image.class"
         :key="(image, index)"
       >
         <div v-if="image.name">
@@ -17,7 +18,7 @@
             :id="`img-${index}`"
             :source="getImgUrl(image.fileName)"
             :alt="image.name"
-            :imageStyle="'border-radius: 4px'"
+            :imageStyle="'border-radius: 4px;' + image.style"
           />
           <div class="pics" v-if="image.pics">
             <ImageItem
@@ -26,7 +27,7 @@
               :key="pic"
               :source="getImgUrl(pic)"
               :alt="image.name"
-              :imageStyle="'border-radius: 4px'"
+              :imageStyle="'border-radius: 4px;' + image.style"
             />
           </div>
         </div>
@@ -57,6 +58,8 @@ export interface IProjectImage {
   pics: string[];
   break: string;
   bgColor: string;
+  style: string;
+  class: string;
 }
 
 export default defineComponent({
@@ -95,6 +98,8 @@ export default defineComponent({
           pics: image.pics,
           break: image.break,
           bgColor: image.bgColor,
+          style: image.style,
+          class: image.class,
         });
       });
     },
@@ -139,8 +144,9 @@ export default defineComponent({
   }
 
   section.gallery {
+    --gap: 2rem;
     display: grid;
-    gap: 2rem;
+    gap: var(--gap);
 
     > :nth-child(n) {
       // v-for
@@ -165,6 +171,24 @@ export default defineComponent({
       justify-content: space-between;
       gap: 2rem;
     }
+
+    // extra classes
+    .full-width {
+      padding: 0;
+
+      > div {
+        max-width: none !important;
+      }
+    }
+    .no-gap-top {
+      margin-top: calc(var(--gap) * -1);
+    }
+    .no-gap-bottom {
+      margin-bottom: calc(var(--gap) * -1);
+    }
+    .no-gap-bottom-end {
+      margin-bottom: -8rem;
+    }
   }
 }
 
@@ -178,7 +202,8 @@ export default defineComponent({
       }
     }
     section.gallery {
-      gap: 6rem;
+      --gap: 6rem;
+      gap: var(--gap);
 
       .break {
         margin-bottom: -4rem;

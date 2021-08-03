@@ -10,7 +10,9 @@
   >
     <UpArrow />
   </div>
-  <Footer v-if="!isProject" />
+  <div ref="footer" v-if="!isProject">
+    <Footer />
+  </div>
   <div ref="projectFooter" v-if="isProject">
     <ProjectFooter />
   </div>
@@ -56,11 +58,13 @@ export default defineComponent({
       if (window.scrollY >= 1250) this.upArrow = true;
       else this.upArrow = false;
 
-      const projectFooter = this.$refs.projectFooter;
+      const footer = !this.isProject
+        ? this.$refs.footer
+        : this.$refs.projectFooter;
       const upArrowElem = this.$refs.upArrow;
-      if (!projectFooter || !upArrowElem) return;
-      if (this.isInView(projectFooter)) {
-        const rect = projectFooter.getBoundingClientRect();
+      if (!footer || !upArrowElem) return;
+      if (this.isInView(footer)) {
+        const rect = footer.getBoundingClientRect();
         upArrowElem.style.bottom = `${window.innerHeight - rect.top - 20}px`;
       } else {
         upArrowElem.style.bottom = "2rem";

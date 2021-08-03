@@ -72,6 +72,7 @@
       },
       {
         "name": "Flux28 typography",
+        "class": "no-gap-bottom-end",
         "bgColor": "white"
       }
     ]
@@ -80,8 +81,50 @@
     "id": "adeasy",
     "title": "AdEasy",
     "intro": "New and improved ways to advertise offline and online. Readily available for all types of businesses. Analytics to assist in setting up a bulletproof marketing strategy. ",
-    "description": "Adeasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, and much more. \n\nI have worked with them as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, implement a new brand guideline across the company, create a UI components library to be used for consistent design and development on the website, improving the overall user experience of the website and dashboard, and help create sustainable design and development practices.",
-    "featuredImage": "cover.webp"
+    "description": "Adeasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, websites, and much more. \n\nI worked with AdEasy as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, implement a new brand guideline across the company, create a UI components library (design system) to be used for consistent design and development on the website and dashboard and help improve the overall user experience of the website and dashboard.",
+    "featuredImage": "cover.webp",
+    "images": [
+      {
+        "name": "AE home page"
+      },
+      {
+        "name": "AE radio page 1"
+      },
+      {
+        "name": "AE radio page 2"
+      },
+      {
+        "name": "AE typography",
+        "bgColor": "white"
+      },
+      {
+        "name": "AE UI components",
+        "class": "full-width no-gap-top",
+        "bgColor": "#eeeeee"
+      },
+      {
+        "name": "AE colour"
+      },
+      {
+        "name": "AE analytics intro"
+      },
+      {
+        "name": "AE desktop view 1"
+      },
+      {
+        "name": "AE desktop view 2"
+      },
+      {
+        "name": "AE desktop view 3"
+      },
+      {
+        "break": "Analytics mobile view"
+      },
+      {
+        "name": "Analytics mobile view",
+        "pics": ["AE mobile view 1.webp", "AE mobile view 2.webp"]
+      }
+    ]
   },
   {
     "id": "zbllc",

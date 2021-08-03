@@ -23,6 +23,7 @@ export default defineComponent({
     source: { type: String, required: true },
     alt: String,
     imageStyle: String,
+    imageClass: String,
   },
 });
 </script>
