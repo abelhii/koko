@@ -82,6 +82,9 @@ export default defineComponent({
       this.images.length = 0;
       const projectId = this.$route.params.id;
       this.project = { ...kokoStore.getProjectById(projectId) };
+      if (Object.keys(this.project).length === 0) {
+        this.$router.push("../");
+      }
       setTimeout(() => this.constructImagePaths());
       window.scrollTo(0, 0);
     },
