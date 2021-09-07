@@ -4,14 +4,14 @@
       class="arrow"
       :to="{ name: 'projects', params: { id: prevProject?.id } }"
     >
-      ⬅ Prev Project
+      <span>⬅ Prev Project</span>
     </router-link>
     <h2>WORK</h2>
     <router-link
       class="arrow"
       :to="{ name: 'projects', params: { id: nextProject?.id } }"
     >
-      Next Project ➡
+      <span>Next Project ➡</span>
     </router-link>
   </footer>
 </template>
@@ -50,7 +50,7 @@ footer {
   display: flex;
   place-items: center;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 1rem;
   color: white;
   background-color: $black;
 
@@ -61,7 +61,35 @@ footer {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.25rem;
+  }
+
+  span {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 425px) {
+  footer {
+    padding: 2rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    padding: 4rem;
+
+    h2 {
+      font-size: 2rem;
+    }
   }
 }
 </style>

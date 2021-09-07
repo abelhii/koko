@@ -43,6 +43,8 @@
 import { kokoStore } from "@/main";
 import { defineComponent } from "@vue/composition-api";
 import ImageItem from "@/components/ImageItem.vue";
+import { analytics } from "@/init-firebase";
+import { logEvent } from "firebase/analytics";
 
 export interface IProject {
   id: string;
@@ -76,17 +78,19 @@ export default defineComponent({
   },
   mounted() {
     this.getProject();
+    if (Object.keys(this.project).length === 0) {
+      this.$router.push({ path: "../home" });
+    }
   },
   methods: {
     getProject(): void {
       this.images.length = 0;
       const projectId = this.$route.params.id;
       this.project = { ...kokoStore.getProjectById(projectId) };
-      if (Object.keys(this.project).length === 0) {
-        this.$router.push("../");
-      }
       setTimeout(() => this.constructImagePaths());
       window.scrollTo(0, 0);
+
+      logEvent(analytics, "project_visits", { title: this.project.title });
     },
     constructImagePaths(): void {
       if (!this.project?.images) {

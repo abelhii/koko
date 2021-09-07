@@ -25,6 +25,7 @@ import UpArrow from "@/components/UpArrow.vue";
 import Footer from "@/components/Footer.vue";
 import ProjectFooter from "@/components/Projects/ProjectFooter.vue";
 import { scrollMeTo } from "./main";
+import { analytics } from "./init-firebase";
 
 export default defineComponent({
   name: "App",
@@ -43,6 +44,7 @@ export default defineComponent({
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
+    console.log(analytics);
   },
   watch: {
     $route() {
