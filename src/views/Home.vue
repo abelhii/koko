@@ -101,6 +101,21 @@ export default defineComponent({
       .projects {
         display: grid;
         gap: 4rem;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .home {
+    section {
+      .content {
+        .projects {
+          gap: 3rem;
+          grid-template-columns: 1fr 1fr;
+        }
       }
     }
   }
@@ -125,7 +140,7 @@ export default defineComponent({
         }
 
         .projects {
-          gap: 8rem;
+          gap: 4rem;
         }
       }
     }

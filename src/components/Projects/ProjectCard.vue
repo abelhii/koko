@@ -2,6 +2,7 @@
   <div class="project-card">
     <ImageItem
       class="project-img"
+      :imageClass="'card-image'"
       :source="
         getImgUrl(project.featuredImage)
           ? getImgUrl(project.featuredImage)
@@ -10,15 +11,18 @@
       :alt="project.title"
     />
     <router-link
-      class="title"
+      class="view-project-cta"
       :to="{ name: 'projects', params: { id: project.id } }"
     >
-      <h1>{{ project.title }}</h1>
-      <div class="arrow"></div>
+      View <br />
+      Project
     </router-link>
-    <h3 class="snippet">
-      {{ project.intro }}
-    </h3>
+    <div class="project-body">
+      <h1>{{ project.title }}</h1>
+      <h3 class="snippet">
+        {{ project.intro }}
+      </h3>
+    </div>
   </div>
 </template>
 
@@ -52,7 +56,7 @@ export default defineComponent({
       return require(`../../assets/images/project-images/${this.project.id}/` +
         fileName);
     },
-  },
+  }
 });
 </script>
 
@@ -60,98 +64,117 @@ export default defineComponent({
 @import "@/styles/_defaultVars.scss";
 
 .project-card {
-  --arrow-color: white;
+  --radius: 8px;
+  display: grid;
   background-color: $black;
 
-  .project-img {
-    height: 200px;
+  .view-project-cta {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-self: end;
+    margin-bottom: 156px;
+    margin-right: 24px;
+    height: 24px;
+    width: 24px;
+    padding: 24px;
+    font-size: 14px;
+    color: $black;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $accent;
+    user-select: none;
+    text-decoration: none;
   }
 
-  .title {
-    cursor: pointer;
-    user-select: none;
-    display: flex;
-    gap: 1rem;
-    place-items: center;
-    font-size: 1rem;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s ease-in-out;
+  .project-img::v-deep img.image__item {
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .project-body {
+    height: 140px;
+    padding: 1.75rem 2rem;
+    background-color: white;
+    border-radius: 0 0 var(--radius) var(--radius);
 
     h1 {
-      margin: 1rem 0;
+      color: $black;
+      margin: 0;
+      margin-bottom: 1rem;
     }
 
-    .arrow {
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-
-      &::before {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 4px;
-        background-color: var(--arrow-color);
-      }
-      &::after {
-        content: "";
-        height: 0;
-        width: 0;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-
-        border-left: 8px solid var(--arrow-color);
-      }
+    h3 {
+      margin: 0;
+      color: $dark-grey;
+      font-size: 1rem;
+      font-weight: 500;
+      max-width: 50ch;
     }
+  }
+}
 
-    &:hover .arrow {
-      animation: hoverBounce 0.75s infinite linear;
+@media (hover: hover) {
+  .view-project-cta {
+    transition: 0.17s ease-in;
+
+    &:hover {
+      transform: scale(105%) rotate(-15deg);
+      box-shadow: $short-shadow;
     }
 
     &:active {
-      color: $accent;
-    }
-    &:active .arrow {
-      animation: none;
-      &::after {
-        border-left: 8px solid $accent;
-      }
-      &::before {
-        background-color: $accent;
-        // animation: zoom 0.2s infinite linear;
-      }
+      transition: 0.07s;
+      transform: scale(95%) rotate(-15deg);
     }
   }
+}
 
-  .snippet {
-    margin: 0;
-    color: $grey;
-    font-weight: 500;
-    max-width: 50ch;
+@media (min-width: 425px) {
+  .project-card {
+    .view-project-cta {
+      margin-bottom: 156px;
+      margin-right: 32px;
+      height: 32px;
+      width: 32px;
+      padding: 32px;
+      font-size: 18px;
+    }
+
+    .project-body {
+      height: 148px;
+
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.15rem;
+      }
+    }
   }
 }
 
 @media (min-width: 1024px) {
   .project-card {
-    .title > h1 {
-      font-size: 2rem;
+    .view-project-cta {
+      margin-bottom: 128px;
+      height: 40px;
+      width: 40px;
+      padding: 40px;
+      font-size: 20px;
     }
-    h3 {
-      font-size: 1.5rem;
-    }
-  }
-}
 
-@keyframes hoverBounce {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(1rem);
-  }
-  100% {
-    transform: translateX(0);
+    .project-body {
+      padding: 1.85rem 2rem 0.75rem 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
   }
 }
 
@@ -161,18 +184,6 @@ export default defineComponent({
   }
   100% {
     padding-left: 100px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .project-card {
-    .project-img {
-      height: 600px;
-    }
-
-    .title {
-      gap: 2rem;
-    }
   }
 }
 </style>

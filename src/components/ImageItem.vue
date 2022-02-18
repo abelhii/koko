@@ -5,6 +5,7 @@
       class="image__item"
       :data-url="source"
       :alt="alt"
+      :class="imageClass"
       :style="imageStyle"
     />
   </figure>
