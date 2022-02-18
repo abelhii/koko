@@ -19,14 +19,14 @@
         "pics": ["1-5.webp", "1-6.webp"]
       },
       {
-        "break": "Alternative colour palette"
-      },
-      {
         "name": "chow_typography",
         "bgColor": "white"
       },
       {
         "name": "chow_colour_palette"
+      },
+      {
+        "break": "Alternative colour palette"
       },
       {
         "name": "orange_chow",

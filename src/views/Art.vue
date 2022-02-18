@@ -15,6 +15,9 @@
 
 <script lang="ts">
 import { defineComponent } from "@vue/composition-api";
+import { analytics } from "@/init-firebase";
+import { logEvent } from "firebase/analytics";
+
 import ImageItem from "@/components/ImageItem.vue";
 
 export interface IArtworks {
@@ -34,6 +37,8 @@ export default defineComponent({
     };
   },
   mounted() {
+    logEvent(analytics, "project_visits", { title: "Art" });
+
     this.importAll(
       require.context("../assets/images/art-images", true, /webp$/)
     );
