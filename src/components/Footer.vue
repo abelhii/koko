@@ -20,6 +20,10 @@
           :url="'https://www.instagram.com/lady_glitchh'"
           :faIcon="'fab fa-instagram'"
         />
+        <SocialBadge
+          :url="'https://www.instagram.com/lady_glitchh'"
+          :faIcon="'fab fa-instagram'"
+        />
       </div>
     </section>
     <!-- <section class="bottom">
