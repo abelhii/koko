@@ -56,7 +56,7 @@ export default defineComponent({
       return require(`../../assets/images/project-images/${this.project.id}/` +
         fileName);
     },
-  }
+  },
 });
 </script>
 
@@ -90,6 +90,7 @@ export default defineComponent({
 
   .project-img::v-deep img.image__item {
     border-radius: var(--radius) var(--radius) 0 0;
+    height: 280px;
   }
 
   .project-body {
@@ -175,15 +176,6 @@ export default defineComponent({
         font-size: 1.25rem;
       }
     }
-  }
-}
-
-@keyframes zoom {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    padding-left: 100px;
   }
 }
 </style>

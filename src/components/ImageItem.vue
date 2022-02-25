@@ -36,6 +36,7 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     margin: 0;
+    width: 100%;
 
     &.loaded {
       .image {

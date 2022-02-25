@@ -163,6 +163,7 @@ export default defineComponent({
 
       > :nth-child(n) {
         // inner div
+        width: 100%;
         max-width: $max-width;
       }
     }
@@ -218,6 +219,7 @@ export default defineComponent({
       }
       .pics {
         flex-direction: row;
+        align-items: flex-start;
       }
     }
   }

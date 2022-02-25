@@ -78,6 +78,48 @@
     ]
   },
   {
+    "id": "backyard_paws",
+    "title": "Backyard paws",
+    "intro": "A creative website designed for this unique company that provides pet grooming services.",
+    "description": "Backyard paws is a unique company that provides pet grooming services. They hired me to design an interactive website while using their style guide. \n\nI made a creative flow for the website using additional elements, like dotted lines and paw marks, to draw the eye from one section to the other.",
+    "featuredImage": "Backyard-paws-Cover.webp",
+    "images": [
+      {
+        "name": "Backyard-paws-Website-1"
+      },
+      {
+        "name": "Backyard-paws-Website-2"
+      },
+      {
+        "name": "Backyard-paws-Typography",
+        "bgColor": "white"
+      },
+      {
+        "name": "Backyard-paws-Colour"
+      }
+    ]
+  },
+  {
+    "id": "noble_portraits",
+    "title": "Noble portraits",
+    "intro": "Successfully re-designed this company, where you can order your personalised portraits.",
+    "description": "Noble portraits is a company that does commission portraits and sells prints. The works of art are by several artists from all over the world. \n\nI re-designed and re-branded their website by giving it a modern, elegant, and minimalist look. The user experience was drastically simplified to make it more accessible to people of all ages and to make sure that the purpose of the website is not lost, which would be to order a portrait or buy a print. Google's material design was used for all the components of this website.",
+    "featuredImage": "np-cover.webp",
+    "images": [
+      {
+        "name": "np-desktop"
+      },
+      {
+        "name": "np-typography",
+        "bgColor": "white"
+      },
+      {
+        "name": "mobile",
+        "pics": ["np-mobile-1.webp", "np-mobile-2.webp"]
+      }
+    ]
+  },
+  {
     "id": "adeasy",
     "title": "AdEasy",
     "intro": "E-commerce company with new and improved ways to advertise through an online platform.",
