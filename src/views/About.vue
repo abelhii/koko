@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "@vue/runtime-dom";
 import MiniKoko from "@/components/MiniKoko.vue";
 
 export default defineComponent({

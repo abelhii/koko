@@ -14,7 +14,7 @@
       <div class="content">
         <h1>SELECTED PROJECTS</h1>
         <div class="projects">
-          <div v-for="project in projects" :key="project">
+          <div v-for="project in projects" :key="project.id">
             <ProjectCard :project="project" />
           </div>
         </div>

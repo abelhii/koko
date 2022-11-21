@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "@vue/runtime-dom";
 import ImageSpinner from "./ImageSpinner.vue";
 
 export default defineComponent({

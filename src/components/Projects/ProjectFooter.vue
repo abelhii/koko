@@ -2,14 +2,14 @@
   <footer>
     <router-link
       class="arrow"
-      :to="{ name: 'projects', params: { id: prevProject?.id } }"
+      :to="{ name: 'projects', params: { id: prevProject.id } }"
     >
       <span>⬅ Prev Project</span>
     </router-link>
     <h2>WORK</h2>
     <router-link
       class="arrow"
-      :to="{ name: 'projects', params: { id: nextProject?.id } }"
+      :to="{ name: 'projects', params: { id: nextProject.id } }"
     >
       <span>Next Project ➡</span>
     </router-link>
@@ -18,19 +18,19 @@
 
 <script lang="ts" scoped>
 import { kokoStore } from "@/main";
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "@vue/runtime-dom";
 
 export default defineComponent({
   name: "ProjectFooter",
   data() {
-    return { prevProject: null, nextProject: null };
+    return { prevProject: {id: null}, nextProject: {id: null} };
   },
   mounted() {
     this.getPrevAndNextProjects();
   },
   methods: {
     getPrevAndNextProjects() {
-      const projectId = this.$route.params.id;
+      const projectId = this.$route.params.id as string;
       this.prevProject = kokoStore.getPrevProject(projectId);
       this.nextProject = kokoStore.getNextProject(projectId);
     },

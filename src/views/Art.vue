@@ -1,6 +1,6 @@
 <template>
   <section class="content gallery">
-    <div class="artwork" v-for="(art, index) in artworks" :key="(art, index)">
+    <div class="artwork" v-for="(art, index) in artworks" :key="(index)">
       <ImageItem
         class="art-img"
         v-if="art.pathLong"
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "@vue/runtime-dom";
 import { analytics } from "@/init-firebase";
 import { logEvent } from "firebase/analytics";
 

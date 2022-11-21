@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "@vue/runtime-dom";
 import ImageItem from "@/components/ImageItem.vue";
 
 export default defineComponent({

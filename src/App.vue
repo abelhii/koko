@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@vue/composition-api";
+import { defineComponent } from "@vue/runtime-dom";
 import Nav from "@/components/Nav.vue";
 import UpArrow from "@/components/UpArrow.vue";
 import Footer from "@/components/Footer.vue";
@@ -63,10 +63,10 @@ export default defineComponent({
       if (window.scrollY >= 1250) this.upArrow = true;
       else this.upArrow = false;
 
-      const footer = !this.isProject
+      const footer: HTMLElement = (!this.isProject
         ? this.$refs.footer
-        : this.$refs.projectFooter;
-      const upArrowElem = this.$refs.upArrow;
+        : this.$refs.projectFooter) as HTMLElement;
+      const upArrowElem = this.$refs.upArrow as HTMLElement;
       if (!footer || !upArrowElem) return;
       if (this.isInView(footer)) {
         const rect = footer.getBoundingClientRect();

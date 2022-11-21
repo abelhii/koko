@@ -9,7 +9,7 @@
         v-for="(image, index) in images"
         :style="{ background: image.bgColor }"
         :class="image.class"
-        :key="(image, index)"
+        :key="(index)"
       >
         <div v-if="image.name">
           <ImageItem
@@ -41,10 +41,10 @@
 
 <script lang="ts">
 import { kokoStore } from "@/main";
-import { defineComponent } from "@vue/composition-api";
 import ImageItem from "@/components/ImageItem.vue";
 import { analytics } from "@/init-firebase";
 import { logEvent } from "firebase/analytics";
+import { defineComponent } from "@vue/runtime-dom";
 
 export interface IProject {
   id: string;
@@ -85,7 +85,7 @@ export default defineComponent({
   methods: {
     getProject(): void {
       this.images.length = 0;
-      const projectId = this.$route.params.id;
+      const projectId = this.$route.params.id as string;
       this.project = { ...kokoStore.getProjectById(projectId) };
       setTimeout(() => this.constructImagePaths());
       window.scrollTo(0, 0);
