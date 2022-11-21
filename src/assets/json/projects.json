@@ -43,6 +43,33 @@
     ]
   },
   {
+    "id": "medical_app",
+    "title": "Medical App",
+    "intro": "An intuitive app to pick a random eatery or discover new places and try something different every time.",
+    "description": "Chow app is a personal project that is still in development. The idea was simple, build something that would help people decide on what to eat. Chow chooses a random eatery nearby the user's current location. \n\nWe aimed to make the app fun, fresh and simple to use. Users can operate the app, both with and without signing up with us, making it accessible to everyone. Initially, we only wanted to add restaurants in the search results but, we decided to expand the search across more categories like cafes, bakeries, bars, etc. Why? We thought, if we were to use an app like Chow, we'd want to be able to search more than just restaurants. \n\nChow is an app that enables users to explore restaurants they wouldn't usually try, which could help generate traffic to more obscure local restaurants, which, I hope, can help to enrich local communities.",
+    "featuredImage": "1.webp",
+    "images": [
+      {
+        "name": "section_1",
+        "pics": ["1.webp", "2.webp"],
+        "class": "no-gap-bottom padding-top-8",
+        "bgColor": "black"
+      },
+      {
+        "name": "section_2",
+        "pics": ["3.webp", "4.webp"],
+        "class": "no-gap-bottom padding-top-bottom-6",
+        "bgColor": "black"
+      },
+      {
+        "name": "section_3",
+        "pics": ["5.webp", "6.webp"],
+        "class": "no-gap-bottom-end padding-bottom-8",
+        "bgColor": "black"
+      }
+    ]
+  },
+  {
     "id": "flux28",
     "title": "Flux28",
     "intro": "A website designed to fit the creativity of a multidisciplinary studio, that caters other companies.",

@@ -9,7 +9,7 @@
         v-for="(image, index) in images"
         :style="{ background: image.bgColor }"
         :class="image.class"
-        :key="(index)"
+        :key="index"
       >
         <div v-if="image.name">
           <ImageItem
@@ -196,6 +196,20 @@ export default defineComponent({
     }
     .no-gap-bottom-end {
       margin-bottom: -8rem;
+    }
+
+    @for $i from 1 through 8 {
+      .padding-top-#{$i} {
+        padding-top: ($i) * 1rem;
+      }
+
+      .padding-bottom-#{$i} {
+        padding-bottom: ($i) * 1rem;
+      }
+
+      .padding-top-bottom-#{$i} {
+        padding: ($i) * 1rem 0;
+      }
     }
   }
 }
