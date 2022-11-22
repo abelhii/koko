@@ -3,7 +3,7 @@
     "id": "spotting_growth",
     "title": "Spotting growth",
     "intro": "Successfully re-designed this company, where you can order your personalised portraits.",
-    "description": "Spotting growth is a marketing guru's personal website. I got hired to redesign the website and give the brand a fresh and creative look. My client already had a website that she was not happy with and wanted to bring me on board to help with the redesign. \n\nSome of the client's requirements included: \n- She wanted to incorporate 3D visuals and icons into her website \n- She wanted the website to be an even balance between corporate and fun \n- She wanted better styling of specific cards on the website, like the services card \n\nKeeping all requirements in mind I sucessfully designed a website my client was happy with and launched the redesigned website for her 1 year anniversary",
+    "description": "Spotting growth is a marketing guru's personal website. I got hired to redesign the website and give the brand a fresh and creative look. My client already had a website that she was not happy with and wanted to bring me on board to help with the redesign. \n\nSome of the client's requirements included: \n- To incorporate 3D visuals and icons into her website \n- The website to be an even balance between corporate and fun \n- Better styling of specific cards on the website, like the services card \n\nKeeping all requirements in mind I sucessfully designed a website my client was happy with and launched the redesigned website for her 1 year anniversary",
     "featuredImage": "1.webp",
     "images": [
       {
@@ -95,10 +95,10 @@
     "featuredImage": "np-cover.webp",
     "images": [
       {
-        "name": "np.webp-desktop"
+        "name": "np-desktop.webp"
       },
       {
-        "name": "np.webp-typography",
+        "name": "np-typography.webp",
         "bgColor": "white"
       },
       {
@@ -142,16 +142,16 @@
     "featuredImage": "cover.webp",
     "images": [
       {
-        "name": "Home.webp 1"
+        "name": "Home 1.webp"
       },
       {
-        "name": "Home.webp 2"
+        "name": "Home 2.webp"
       },
       {
         "name": "Video.webp"
       },
       {
-        "name": "Video.webp preview"
+        "name": "Video preview.webp"
       },
       {
         "name": "Art.webp"
@@ -160,10 +160,10 @@
         "name": "3D.webp"
       },
       {
-        "name": "3D.webp preview"
+        "name": "3D preview.webp"
       },
       {
-        "name": "Flux28.webp typography",
+        "name": "Flux28 typography.webp",
         "class": "no-gap-bottom-end",
         "bgColor": "white"
       }
@@ -177,17 +177,17 @@
     "featuredImage": "Backyard-paws-Cover.webp",
     "images": [
       {
-        "name": "Backyard.webp-paws-Website-1"
+        "name": "Backyard-paws-Website-1.webp"
       },
       {
-        "name": "Backyard.webp-paws-Website-2"
+        "name": "Backyard-paws-Website-2.webp"
       },
       {
-        "name": "Backyard.webp-paws-Typography",
+        "name": "Backyard-paws-Typography.webp",
         "bgColor": "white"
       },
       {
-        "name": "Backyard.webp-paws-Colour"
+        "name": "Backyard-paws-Colour.webp"
       }
     ]
   },
@@ -199,7 +199,7 @@
     "featuredImage": "cover.webp",
     "images": [
       {
-        "name": "AE.webp UI components",
+        "name": "AE UI components.webp",
         "class": "no-gap-bottom-end full-width padding-top-bottom-6 padding-left-right-6",
         "bgColor": "#EDEDED"
       }
