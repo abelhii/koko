@@ -1,5 +1,61 @@
 [
   {
+    "id": "spotting_growth",
+    "title": "Spotting growth",
+    "intro": "Successfully re-designed this company, where you can order your personalised portraits.",
+    "description": "Spotting growth is a marketing guru's personal website. I got hired to redesign the website and give the brand a fresh and creative look. My client already had a website that she was not happy with and wanted to bring me on board to help with the redesign. \n\nSome of the client's requirements included: \n- She wanted to incorporate 3D visuals and icons into her website \n- She wanted the website to be an even balance between corporate and fun \n- She wanted better styling of specific cards on the website, like the services card \n\nKeeping all requirements in mind I sucessfully designed a website my client was happy with and launched the redesigned website for her 1 year anniversary",
+    "featuredImage": "1.webp",
+    "images": [
+      {
+        "name": "1.webp"
+      },
+      {
+        "name": "2.webp"
+      },
+      {
+        "name": "sg_typography.webp",
+        "bgColor": "white"
+      },
+      {
+        "name": "sg_colour.webp"
+      }
+    ]
+  },
+  {
+    "id": "tourism",
+    "title": "Tourism website template",
+    "intro": "Successfully re-designed this company, where you can order your personalised portraits.",
+    "description": "For this project, I got hired to design a tourism website template for Divi, which is a WordPress plugin. My client gave me creative freedom with some limitations I had to consider. \n\nMy client requested website designs that are unique but simple enough to transfer to Divi. They also asked for a simple calendar layout that will immediately inform users of the date, time, event, and location. \n\nAs a designer, it is essential to know how to work around limitations like steering clear of section layouts that are hard to translate into page builders. I designed each section carefully, making it creative and stylish while keeping it simple enough to transfer to Divi.",
+    "featuredImage": "1.webp",
+    "images": [
+      {
+        "name": "Gif.gif"
+      },
+      {
+        "name": "1.webp"
+      },
+      {
+        "name": "2.webp"
+      },
+      {
+        "name": "3.webp"
+      },
+      {
+        "name": "4.webp"
+      },
+      {
+        "name": "5.webp"
+      },
+      {
+        "name": "tourism_typography.webp",
+        "bgColor": "white"
+      },
+      {
+        "name": "tourism_colour.webp"
+      }
+    ]
+  },
+  {
     "id": "chow",
     "title": "Chow",
     "intro": "An intuitive app to pick a random eatery or discover new places and try something different every time.",
@@ -7,27 +63,27 @@
     "featuredImage": "cover.webp",
     "images": [
       {
-        "name": "chow",
+        "name": "chow.webp",
         "pics": ["1.webp", "2.webp"]
       },
       {
-        "name": "chow",
+        "name": "chow.webp",
         "pics": ["3.webp", "4.webp"]
       },
       {
-        "name": "chow",
+        "name": "chow.webp",
         "pics": ["5.webp", "6.webp"]
       },
       {
-        "name": "chow",
+        "name": "chow.webp",
         "pics": ["7.webp", "8.webp"]
       },
       {
-        "name": "chow_typography",
+        "name": "chow_typography.webp",
         "bgColor": "white"
       },
       {
-        "name": "chow_colour"
+        "name": "chow_colour.webp"
       }
     ]
   },
@@ -39,37 +95,15 @@
     "featuredImage": "np-cover.webp",
     "images": [
       {
-        "name": "np-desktop"
+        "name": "np.webp-desktop"
       },
       {
-        "name": "np-typography",
+        "name": "np.webp-typography",
         "bgColor": "white"
       },
       {
-        "name": "mobile",
+        "name": "mobile.webp",
         "pics": ["np-mobile-1.webp", "np-mobile-2.webp"]
-      }
-    ]
-  },
-  {
-    "id": "spotting_growth",
-    "title": "Spotting growth",
-    "intro": "Successfully re-designed this company, where you can order your personalised portraits.",
-    "description": "Spotting growth is a marketing guru's personal website. I got hired to redesign the website and give the brand a fresh and creative look. My client already had a website that she was not happy with and wanted to bring me on board to help with the redesign. \n\nSome of the client's requirements included: \n\n- She wanted to incorporate 3D visuals and icons into her website \n\n- She wanted the website to be an even balance between corporate and fun \n\n- She wanted better styling of specific cards on the website, like the services card",
-    "featuredImage": "1.webp",
-    "images": [
-      {
-        "name": "1"
-      },
-      {
-        "name": "2"
-      },
-      {
-        "name": "sg_typography",
-        "bgColor": "white"
-      },
-      {
-        "name": "sg_colour"
       }
     ]
   },
@@ -81,19 +115,19 @@
     "featuredImage": "1.webp",
     "images": [
       {
-        "name": "section_1",
+        "name": "section_1.webp",
         "pics": ["1.webp", "2.webp"],
         "class": "no-gap-bottom padding-top-8",
         "bgColor": "#D7DCE1"
       },
       {
-        "name": "section_2",
+        "name": "section_2.webp",
         "pics": ["3.webp", "4.webp"],
         "class": "no-gap-bottom padding-top-bottom-6",
         "bgColor": "#D7DCE1"
       },
       {
-        "name": "section_3",
+        "name": "section_3.webp",
         "pics": ["5.webp", "6.webp"],
         "class": "no-gap-bottom-end padding-bottom-8",
         "bgColor": "#D7DCE1"
@@ -108,28 +142,28 @@
     "featuredImage": "cover.webp",
     "images": [
       {
-        "name": "Home 1"
+        "name": "Home.webp 1"
       },
       {
-        "name": "Home 2"
+        "name": "Home.webp 2"
       },
       {
-        "name": "Video"
+        "name": "Video.webp"
       },
       {
-        "name": "Video preview"
+        "name": "Video.webp preview"
       },
       {
-        "name": "Art"
+        "name": "Art.webp"
       },
       {
-        "name": "3D"
+        "name": "3D.webp"
       },
       {
-        "name": "3D preview"
+        "name": "3D.webp preview"
       },
       {
-        "name": "Flux28 typography",
+        "name": "Flux28.webp typography",
         "class": "no-gap-bottom-end",
         "bgColor": "white"
       }
@@ -143,17 +177,17 @@
     "featuredImage": "Backyard-paws-Cover.webp",
     "images": [
       {
-        "name": "Backyard-paws-Website-1"
+        "name": "Backyard.webp-paws-Website-1"
       },
       {
-        "name": "Backyard-paws-Website-2"
+        "name": "Backyard.webp-paws-Website-2"
       },
       {
-        "name": "Backyard-paws-Typography",
+        "name": "Backyard.webp-paws-Typography",
         "bgColor": "white"
       },
       {
-        "name": "Backyard-paws-Colour"
+        "name": "Backyard.webp-paws-Colour"
       }
     ]
   },
@@ -161,48 +195,13 @@
     "id": "adeasy",
     "title": "AdEasy",
     "intro": "E-commerce company with new and improved ways to advertise through an online platform.",
-    "description": "AdEasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, websites, and much more. \n\nI worked with AdEasy as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, implement a new brand guideline across the company, create a UI components library (design system) to be used for consistent design and development on the website and dashboard and help improve the overall user experience of the website and dashboard.",
+    "description": "AdEasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, websites, and much more. \n\nI worked with AdEasy as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, create a new design system to be used for consistent design and development on the website and dashboard and help improve the overall user experience of their dashboard.",
     "featuredImage": "cover.webp",
     "images": [
       {
-        "name": "AE home page"
-      },
-      {
-        "name": "AE radio page 1"
-      },
-      {
-        "name": "AE radio page 2"
-      },
-      {
-        "name": "AE typography",
-        "bgColor": "white"
-      },
-      {
-        "name": "AE UI components",
-        "class": "full-width no-gap-top",
-        "bgColor": "#eeeeee"
-      },
-      {
-        "name": "AE colour"
-      },
-      {
-        "name": "AE analytics intro"
-      },
-      {
-        "name": "AE desktop view 1"
-      },
-      {
-        "name": "AE desktop view 2"
-      },
-      {
-        "name": "AE desktop view 3"
-      },
-      {
-        "break": "Analytics mobile view"
-      },
-      {
-        "name": "Analytics mobile view",
-        "pics": ["AE mobile view 1.webp", "AE mobile view 2.webp"]
+        "name": "AE.webp UI components",
+        "class": "no-gap-bottom-end full-width padding-top-bottom-6 padding-left-right-6",
+        "bgColor": "#EDEDED"
       }
     ]
   },
@@ -214,23 +213,23 @@
     "featuredImage": "cover.webp",
     "images": [
       {
-        "name": "ZB_home_page"
+        "name": "ZB_home_page.webp"
       },
       {
-        "name": "ZB_typography",
+        "name": "ZB_typography.webp",
         "bgColor": "white"
       },
       {
-        "name": "ZB_colour_palette"
+        "name": "ZB_colour_palette.webp"
       },
       {
-        "name": "ZB_case_study_page"
+        "name": "ZB_case_study_page.webp"
       },
       {
-        "name": "ZB_contact_form"
+        "name": "ZB_contact_form.webp"
       },
       {
-        "name": "ZB_logo"
+        "name": "ZB_logo.webp"
       }
     ]
   }

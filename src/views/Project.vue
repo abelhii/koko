@@ -101,7 +101,7 @@ export default defineComponent({
       this.project.images.forEach((image): void => {
         this.images.push({
           name: image.name,
-          fileName: `${image.name}.webp`,
+          fileName: image.name,
           pics: image.pics,
           break: image.break,
           bgColor: image.bgColor,
@@ -111,8 +111,7 @@ export default defineComponent({
       });
     },
     getImgUrl(fileName: string) {
-      return require(`../assets/images/project-images/${this.project.id}/` +
-        fileName);
+      return require(`../assets/images/project-images/${this.project.id}/${fileName}`);
     },
   },
   watch: {
@@ -223,6 +222,7 @@ export default defineComponent({
         font-size: 1.5rem;
       }
     }
+
     section.gallery {
       --gap: 6rem;
       gap: var(--gap);
@@ -231,9 +231,16 @@ export default defineComponent({
         margin-bottom: -4rem;
         font-size: 1.5rem;
       }
+
       .pics {
         flex-direction: row;
         align-items: flex-start;
+      }
+
+      @for $i from 1 through 8 {
+        .padding-left-right-#{$i} {
+          padding: 0 ($i) * 1rem;
+        }
       }
     }
   }
