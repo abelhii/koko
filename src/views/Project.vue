@@ -207,7 +207,7 @@ export default defineComponent({
       }
 
       .padding-top-bottom-#{$i} {
-        padding: ($i) * 1rem 0;
+        padding: ($i) * 1rem 2rem;
       }
     }
   }

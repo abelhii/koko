@@ -2,9 +2,9 @@
   {
     "id": "spotting_growth",
     "title": "Spotting growth",
-    "intro": "Successfully re-designed this company, where you can order your personalised portraits.",
-    "description": "Spotting growth is a marketing guru's personal website. I got hired to redesign the website and give the brand a fresh and creative look. My client already had a website that she was not happy with and wanted to bring me on board to help with the redesign. \n\nSome of the client's requirements included: \n- To incorporate 3D visuals and icons into her website \n- The website to be an even balance between corporate and fun \n- Better styling of specific cards on the website, like the services card \n\nKeeping all requirements in mind I sucessfully designed a website my client was happy with and launched the redesigned website for her 1 year anniversary",
-    "featuredImage": "1.webp",
+    "intro": "Successfully re-designed a marketing Guru's business website",
+    "description": "Spotting growth is a marketing guru's personal website. I got hired to redesign the website and give the brand a fresh and creative look. My client already had a website that she was not happy with and wanted to bring me on board to help with the redesign. \n\nSome of the client's requirements were: \n- To incorporate 3D visuals and icons in the website \n- Renew the look and feel of the brand \n- Improve overall styling for all elements across the website \n\nKeeping all requirements in mind I sucessfully redesigned the website and my client was happy with the new website which she launched for her 1 year anniversary",
+    "featuredImage": "sg_cover.webp",
     "images": [
       {
         "name": "1.webp"
@@ -23,10 +23,10 @@
   },
   {
     "id": "tourism",
-    "title": "Tourism website template",
-    "intro": "Successfully re-designed this company, where you can order your personalised portraits.",
+    "title": "Tourism template",
+    "intro": "Created a template design for the famous Divi theme used in WordPress",
     "description": "For this project, I got hired to design a tourism website template for Divi, which is a WordPress plugin. My client gave me creative freedom with some limitations I had to consider. \n\nMy client requested website designs that are unique but simple enough to transfer to Divi. They also asked for a simple calendar layout that will immediately inform users of the date, time, event, and location. \n\nAs a designer, it is essential to know how to work around limitations like steering clear of section layouts that are hard to translate into page builders. I designed each section carefully, making it creative and stylish while keeping it simple enough to transfer to Divi.",
-    "featuredImage": "1.webp",
+    "featuredImage": "tourism_cover.webp",
     "images": [
       {
         "name": "Gif.gif"
@@ -44,9 +44,6 @@
         "name": "4.webp"
       },
       {
-        "name": "5.webp"
-      },
-      {
         "name": "tourism_typography.webp",
         "bgColor": "white"
       },
@@ -57,7 +54,7 @@
   },
   {
     "id": "chow",
-    "title": "Chow",
+    "title": "Chow app",
     "intro": "An intuitive app to pick a random eatery or discover new places and try something different every time.",
     "description": "Chow app is a personal project that is still in development. The idea was simple, build something that would help people decide on what to eat. Chow chooses a random eatery nearby the user's current location. \n\nWe aimed to make the app fun, fresh and simple to use. Users can operate the app, both with and without signing up with us, making it accessible to everyone. Initially, we only wanted to add restaurants in the search results but, we decided to expand the search across more categories like cafes, bakeries, bars, etc. Why? We thought, if we were to use an app like Chow, we'd want to be able to search more than just restaurants. \n\nChow is an app that enables users to explore restaurants they wouldn't usually try, which could help generate traffic to more obscure local restaurants, which, I hope, can help to enrich local communities.",
     "featuredImage": "cover.webp",
@@ -109,10 +106,10 @@
   },
   {
     "id": "medical_app",
-    "title": "Medical App",
+    "title": "Medical app",
     "intro": "An app that simplifies life for people seeking medical related services",
     "description": "I got hired to redesign this app and simplify the user experience. This app focuses on giving users of all ages accessibility to multiple medical-related tasks. \n\nUsers can find specialists close to them. They can call, message, and book appointments through the app with their preferred medical practitioners.",
-    "featuredImage": "1.webp",
+    "featuredImage": "medical_cover.webp",
     "images": [
       {
         "name": "section_1.webp",
@@ -131,6 +128,16 @@
         "pics": ["5.webp", "6.webp"],
         "class": "no-gap-bottom-end padding-bottom-8",
         "bgColor": "#D7DCE1"
+      },
+      {
+        "name": "medicalapp_typography.webp",
+        "bgColor": "white",
+        "class": "no-gap-bottom"
+      },
+      {
+        "name": "medicalapp_colour.webp",
+        "bgColor": "#F1F1F1",
+        "class": "no-gap-bottom-end"
       }
     ]
   },
@@ -170,6 +177,78 @@
     ]
   },
   {
+    "id": "adeasy",
+    "title": "AdEasy",
+    "intro": "E-commerce company with new and improved ways to advertise through an online platform.",
+    "description": "AdEasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, websites, and much more. \n\nI worked with AdEasy as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, create a new design system to be used for consistent design and development on the website and dashboard and help improve the overall user experience of their dashboard.",
+    "featuredImage": "cover.webp",
+    "images": [
+      {
+        "name": "AE UI components.webp",
+        "class": "no-gap-bottom-end full-width padding-top-bottom-6 padding-left-right-6",
+        "bgColor": "#EDEDED"
+      }
+    ]
+  },
+  {
+    "id": "parliament_street",
+    "title": "Medical website",
+    "intro": "I redesigned the website for Parliament Street Medical Practice in Dublin city.",
+    "description": "Parliament street medical practice is a hospital that specialises in multiple areas of medicine. They give specialised care and facilitate many types of medical check-ups, both for individuals and corporates. \n\nI got hired to redesign their website, give them a new and improved branding and improve the user experience for their online booking system.",
+    "featuredImage": "medical_cover.webp",
+    "images": [
+      {
+        "name": "medical_branding.webp"
+      },
+      {
+        "name": "1.webp"
+      },      
+      {
+        "name": "2.webp"
+      },
+      {
+        "name": "medical",
+        "pics": ["mobile1.webp", "mobile2.webp"]
+      },
+      {
+        "name": "medical_typography.webp",
+        "bgColor": "white"
+      },
+      {
+        "name": "medical_colour.webp"
+      }
+    ]
+  },
+  {
+    "id": "coworking_space",
+    "title": "Coworking space",
+    "intro": "Designed a fresh look for a coworking space website.",
+    "description": "I got hired to design a website for a new coworking space. The client wanted the website to look bright and fresh so I choose to use green and yellow as the primary brand colours. To give the website an inviting appeal I used rounded font, buttons and other additional shapes.",
+    "featuredImage": "coworking_cover.webp",
+    "images": [
+      {
+        "name": "1.webp",
+        "bgColor": "#D7DCE1",
+        "class": "no-gap-bottom padding-top-bottom-8"
+      },
+      {
+        "name": "2.webp",
+        "bgColor": "#D7DCE1",
+        "class": "no-gap-bottom padding-bottom-8"
+      },
+      {
+        "name": "coworking_typography.webp",
+        "bgColor": "white",
+        "class": "no-gap-bottom"
+      },
+      {
+        "name": "coworking_colour.webp",
+        "bgColor": "#F1F1F1",
+        "class": "no-gap-bottom-end"
+      }
+    ]
+  },
+  {
     "id": "backyard_paws",
     "title": "Backyard paws",
     "intro": "A creative website designed for this unique company that provides pet grooming services.",
@@ -188,20 +267,6 @@
       },
       {
         "name": "Backyard-paws-Colour.webp"
-      }
-    ]
-  },
-  {
-    "id": "adeasy",
-    "title": "AdEasy",
-    "intro": "E-commerce company with new and improved ways to advertise through an online platform.",
-    "description": "AdEasy is a marketplace for online and offline advertising. Through this platform, advertisers can easily book ad space ranging in different media like billboards, newspapers, radio, websites, and much more. \n\nI worked with AdEasy as an in-house UI UX designer. Some of the projects that I was responsible for include: re-vamping the website, create a new design system to be used for consistent design and development on the website and dashboard and help improve the overall user experience of their dashboard.",
-    "featuredImage": "cover.webp",
-    "images": [
-      {
-        "name": "AE UI components.webp",
-        "class": "no-gap-bottom-end full-width padding-top-bottom-6 padding-left-right-6",
-        "bgColor": "#EDEDED"
       }
     ]
   },

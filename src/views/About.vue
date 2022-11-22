@@ -3,7 +3,7 @@
     <header>
       <div class="content">
         <h1>
-          <span data-tooltip="Wardah">Koko</span> is a<br />
+          <span data-tooltip="Koko">Wardah</span> is a<br />
           multidisciplinary <br />
           designer.
         </h1>
@@ -37,7 +37,7 @@
         </p>
         <p>
           If you are interested to know more about my experience and education,
-          click on my resume linked below.
+          click on my resume in the footer.
         </p>
       </div>
     </section>

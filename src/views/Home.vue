@@ -4,15 +4,15 @@
       <div class="content">
         <Scroll class="scroll-text" :scrollWord="scrollWord" />
         <p>
-          <span data-tooltip="Wardah">Koko</span> is a designer focused on
-          creating user-centric experiences and meaningful identities.
+          <span data-tooltip="Koko">Wardah</span> is a designer focused on
+          creating user-centric experiences and eye-catching user interfaces.
         </p>
         <DownArrow v-on:click="scrollTo('projects')" />
       </div>
     </header>
     <section ref="projects">
       <div class="content">
-        <h1>SELECTED PROJECTS</h1>
+        <h1>PROJECTS</h1>
         <div class="projects">
           <div v-for="project in projects" :key="project.id">
             <ProjectCard :project="project" />
