@@ -4,6 +4,15 @@
       <h1>{{ project.title }}</h1>
       <p>{{ project.description }}</p>
     </header>
+    <section class="figma" v-if="project.figmaUrl">
+      <iframe
+        style="border: 1px solid rgba(0, 0, 0, 0.1);"
+        width="100%"
+        height="700"
+        :src="project.figmaUrl"
+        allowfullscreen
+      ></iframe>
+    </section>
     <section class="gallery" v-if="images.length > 0">
       <div
         v-for="(image, index) in images"
@@ -52,6 +61,7 @@ export interface IProject {
   description: string;
   featuredImage: string;
   images: IProjectImage[];
+  figmaUrl?: string;
 }
 
 export interface IProjectImage {
@@ -147,6 +157,11 @@ export default defineComponent({
       margin: 1rem 0;
       max-width: 50ch;
     }
+  }
+
+  section.figma {
+    width: 100%;
+    overflow: hidden;
   }
 
   section.gallery {
